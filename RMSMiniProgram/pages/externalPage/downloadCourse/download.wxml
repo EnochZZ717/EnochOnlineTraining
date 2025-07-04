@@ -1,0 +1,4 @@
+<page>
+  <web-view bindload="onPageLoad" bindmessage="onWebMessage" src="https://app.jingsocial.com/microFrontend/contentCenterH5/center/LNDyn2nwMoQdacMSrVz2EF?appid=wx0fcf5f767046543b&formSurvey=true&tabid=EysMGgfRsyDSSpg7tdxN8H&openid=oXC1AxDlYjnrkEa2dN4RTKXXN_Mc">
+  </web-view>
+</page>

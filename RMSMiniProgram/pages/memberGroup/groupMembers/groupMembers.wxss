@@ -1,0 +1,109 @@
+.view-page {
+  height: 100vh;
+  background: #F6F6F6;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.page-content {
+  background: #fff;
+}
+
+.group-container {
+  padding-top: 15px;
+  font-size: 13px;
+  height: 50px;
+}
+
+.container-left {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+
+image {
+  width: 40px;
+  height: 40px;
+}
+
+.container-right {
+  width: 75%;
+  float: left;
+  height: 50px;
+  border-bottom: 0.5px solid #DFDFDF;
+}
+
+.group-name {
+  font-size: 14px;
+  color: #000000;
+}
+
+.group-detail {
+  font-size: 12px;
+  flex-direction: row;
+  margin-top: 5px;
+  color: #7F7F7F;
+}
+
+.group-menber {
+  width: 25%;
+  float: left;
+}
+
+.group-course {
+  width: 25%;
+  float: left;
+}
+
+.group-progress {
+  width: 40%;
+  float: left;
+}
+
+.group-icon {
+  width: 10%;
+  float: left;
+  margin-top: -7px;
+  text-align: right;
+}
+
+.operation-container {
+  font-size: 12px;
+  line-height: 40px;
+  color: #000000;
+  height: 40px;
+}
+
+.operation-container2 {
+  width: 78px;
+  background: #fff;
+  position: absolute;
+  margin-left: -58px;
+  text-align: center;
+  margin-top: -21px;
+  border: 0.5px solid #eee;
+  box-shadow: 0px 5px 7px 1px #DDDDDD;
+  z-index: 999;
+}
+
+.middle-line {
+  height: 1px;
+  background: #eee;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.operation-container2-item {
+  color: #000000;
+  height: 31px;
+  line-height: 31px;
+  font-size: 12px;
+}
+
+.add-container {
+  float: right;
+  margin-left: 24px;
+}
+
+.edit-container {
+  float: right;
+}

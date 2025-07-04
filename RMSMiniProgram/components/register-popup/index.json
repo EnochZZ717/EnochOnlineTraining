@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-overlay": "@want/weapp/overlay/index",
+    "van-button": "@want/weapp/button/index"
+  }
+}

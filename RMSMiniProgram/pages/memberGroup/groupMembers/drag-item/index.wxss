@@ -1,0 +1,170 @@
+.info {
+  position: relative;
+  padding-top: 100%;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.info__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.info__item .image {
+  width: 100%;
+  height: 100%;
+}
+
+.cell {
+  box-sizing: border-box;
+  background: #FFFFFF;
+}
+
+.cell__hd {
+  font-size: 0;
+}
+
+.cell__hd .image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+  border-radius: 12rpx;
+}
+
+.cell__bd {
+  flex: 1;
+}
+
+.cell__bd .name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-all;
+  font-size: 28rpx;
+  margin-bottom: 4rpx;
+}
+
+.cell__bd .des {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-all;
+  color: #666666;
+  font-size: 24rpx;
+}
+
+.view-page {
+  height: 100vh;
+  background: #F6F6F6;
+}
+
+.page-content {
+  background: #fff;
+}
+
+.group-container {
+  padding-top: 15px;
+  font-size: 13px;
+  height: 50px;
+}
+
+.container-left {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+
+/* image {
+  width: 40px;
+  height: 40px;
+} */
+
+.container-right {
+  width: 75%;
+  float: left;
+  height: 50px;
+  border-bottom: 0.5px solid #DFDFDF;
+}
+
+.group-name {
+  font-size: 14px;
+  color: #000000;
+}
+
+.group-detail {
+  font-size: 12px;
+  flex-direction: row;
+  margin-top: 5px;
+  color: #7F7F7F;
+}
+
+.group-menber {
+  width: 25%;
+  float: left;
+}
+
+.group-course {
+  width: 25%;
+  float: left;
+}
+
+.group-progress {
+  width: 40%;
+  float: left;
+}
+
+.group-icon {
+  width: 10%;
+  float: left;
+  margin-top: -7px;
+  text-align: right;
+}
+
+.operation-container {
+  font-size: 12px;
+  line-height: 40px;
+  color: #000000;
+  height: 40px;
+}
+
+.operation-container2 {
+  width: 78px;
+  background: #fff;
+  position: absolute;
+  margin-left: -57px;
+  text-align: center;
+  margin-top: -21px;
+  border: 0.5px solid #eee;
+  box-shadow: 0px 5px 7px 1px #DDDDDD;
+}
+
+.middle-line {
+  height: 1px;
+  background: #eee;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.operation-container2-item {
+  color: #000000;
+  height: 31px;
+  line-height: 31px;
+  font-size: 12px;
+}
+
+.add-container {
+  float: right;
+  margin-left: 24px;
+}
+
+.edit-container {
+  float: right;
+}

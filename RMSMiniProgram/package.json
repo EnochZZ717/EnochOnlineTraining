@@ -1,0 +1,16 @@
+{
+  "name": "Zeiss",
+  "version": "1.0.0",
+  "description": "Zeiss online training system",
+  "main": "app.js",
+  "scripts": {
+   
+  },
+  "keywords": [],
+  "author": "wilson fan",
+  "dependencies": {
+    "@vant/weapp": "^1.10.2"
+  },
+  "devDependencies": {
+  }
+}

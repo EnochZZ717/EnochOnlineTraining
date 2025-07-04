@@ -1,0 +1,86 @@
+<view class="page">
+  <navbar page-name="编辑个人资料"></navbar>
+  <van-cell-group>
+    <van-field label="头像" input-align="right" catchtap="getUserImage" readonly>
+      <van-icon name="{{userImage}}" color="#9B9B9B" size="30" slot="right-icon" />
+    </van-field>
+
+    <van-field value="{{ inputUserName }}" maxlength="32" label="用户名" input-align="right"
+      bind:change="userNameChange" />
+    <van-field value="{{ inputPhoneNumber }}" maxlength="11" type="number" label="手机号" input-align="right"
+      bind:change="phoneNumberChange" />
+    <van-field value="{{ inputEmail }}" maxlength="32" label="邮箱" input-align="right" bind:change="emailChange" />
+    <van-field value="{{ inputJobTitle }}" maxlength="64" label="职称" input-align="right" bind:change="jobTitleChange" />
+    <van-field value="{{ inputCompanyType }}" readonly maxlength="64" label="企业类型" input-align="right"
+      bindtap="getCompanyTypeModal" />
+    <van-field value="{{ inputCompany }}" maxlength="64" label="单位" input-align="right" bind:change="companyChange" />
+
+    <van-field wx:if="{{inputCompanyType=='科研机构'}}" value="{{ inputSchool }}" maxlength="64" label="学院/课题组"
+      input-align="right" bind:change="schoolChange" />
+    <van-field wx:if="{{inputCompanyType=='医院'}}" value="{{ inputOffice }}" maxlength="64" label="科室"
+      input-align="right" bind:change="officeChange" />
+    <van-field wx:if="{{inputCompanyType=='工业(新材料产业，半导体等)'||inputCompanyType=='工业'}}" value="{{ inputDepartment }}"
+      maxlength="64" label="部门" input-align="right" bind:change="departmentChange" />
+
+    <van-field value="{{ inputSns }}" label="设备序列（SN）号" input-align="right" readonly bindtap="getSnsModal" />
+    <van-field value="{{ inputIndustryName }}" label="所属行业" readonly="{{disableIndustryInput}}" input-align="right"
+      bindtap="getIndustryModal" bind:change="industryChange" focus="{{inputIndustryFocus}}" />
+    <van-field value="{{ inputArea }}" label="区域" input-align="right" readonly bindtap="getAreaModal" />
+  </van-cell-group>
+
+  <view class="components">
+    <van-action-sheet show="{{ showImageActions }}" actions="{{ actions }}" description="请选择更新头像方式" cancel-text="取消"
+      bind:select="onSelect" bind:getuserinfo="onGetUserInfo" bind:cancel="onCloseActions" />
+
+    <van-popup maxHeight="450px" show="{{ showSnPopup }}" round position="bottom" custom-style="height: 80%"
+      bind:close="onCloseSnPopup">
+      <view class="sn-tips-container" bindtap="goSnGuide">
+        <!-- <van-buttom bindtap="onCloseSnPopup" type="primary" size="mini" round custom-style="margin-top: 10px;margin-button:10px;float:right;margin-right: 10px;">完成
+        </van-buttom> -->
+        点击此处查看<text style="color: #008BD0;font-weight: bold;">如何找到序列号?</text>
+      </view>
+      <view>
+        <van-field value="{{ inputSn }}" maxlength="24" type="number" center clearable placeholder="请输入SN号"
+          bind:change="onSnChange" input-class="sn-input" use-button-slot>
+          <van-buttom slot="button" wx:if="{{showConfirmInput}}" disabled="{{confirmSnInput}}" type="primary"
+            size="mini" color="#008BD0" bind:click="onCompleteSnInput"
+            custom-style="{{confirmSnInput?'color:#a59696;background-color:#eee;border-color:#ccc;':''}}">确定
+          </van-buttom>
+        </van-field>
+      </view>
+      <scroll-view scroll-y style="max-height: 280px;">
+        <!-- <van-cell wx:for="{{inputSns}}" wx:key="index" title="{{item}}">
+          <van-icon slot="right-icon" color="#3D3D3D" name="delete-o" bind:click="onRemoveSn" data-index="{{item}}" size="20" />
+        </van-cell> -->
+
+        <van-field wx:for="{{inputSns}}" wx:key="index" value="{{ item }}" maxlength="24" type="text" center
+          input-class="sn-input" bind:confirm="onUpdateSnInput" bind:focus="onClickUpdateSnInput">
+          <van-icon slot="right-icon" color="#3D3D3D" name="delete-o" bind:click="onRemoveSn" data-index="{{item}}"
+            size="20" />
+        </van-field>
+      </scroll-view>
+    </van-popup>
+
+    <van-popup show="{{ showIndustryPopup  }}" position="bottom">
+      <van-picker show-toolbar columns="{{ industries }}" bind:confirm="onConfirmIndustry"
+        bind:cancel="onCancelIndustry" default-index="{{ industryIndex }}" />
+    </van-popup>
+
+    <van-popup show="{{ showAreaPopup  }}" position="bottom">
+      <van-picker id='areaPicker' show-toolbar columns="{{ areaColumns }}" bind:change="onChange"
+        bind:change="onChangeArea" bind:confirm="onConfirmArea" bind:cancel="onCancelArea" />
+    </van-popup>
+
+    <van-popup show="{{ showCompanyTypeModal  }}" position="bottom">
+      <van-picker show-toolbar columns="{{ compantTypes }}" bind:confirm="onConfirmCompanyType"
+        bind:cancel="onCloseCompanyType" default-index="{{ comoanyTypeIndex }}" />
+    </van-popup>
+  </view>
+
+  <view class="btnContainer">
+    <van-buttom bindtap="onSave" disabled="{{isDisable}}" loading="{{submit}}" loading-text="正在提交..." color="#008BD0"
+      type="primary" block custom-style="width: 172px;margin-top: 10px;margin-button:10px;">保存
+    </van-buttom>
+  </view>
+
+</view>

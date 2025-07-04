@@ -1,0 +1,47 @@
+<wxs src="../../../utils/util.wxs" module="common" />
+<navbar page-name="蔡司学习小组" showNav="{{true}}"></navbar>
+<view style="margin-top: 20px; margin-bottom: 87px;">
+
+  <view class="group-container" wx:for="{{groups}}" wx:key="index" bindtap="selectGroup" data-index="{{item}}" wx:if="{{item.isGroup}}">
+    <view class="checkbox-container">
+      <image src="{{common.isExist(selectedGroup,item.memberGroupId)?'../../../images/checked.png':'../../../images/checkbox.png'}}" style="width: 12px; height: 12px;" />
+    </view>
+    <view class="container-left">
+      <image src="{{item.imagePath}}" />
+    </view>
+    <view class="container-right">
+      <view class="group-name">
+        {{item.name}}
+      </view>
+      <view class="group-detail">
+        <view class="group-menber">人数:{{item.memberCount}}</view>
+        <view class="group-course">课程:{{item.courseCount}}</view>
+        <view class="group-progress">平均进度:{{item.completePercent}}%</view>
+      </view>
+      <view class="group-icon">
+        <van-icon name="arrow" size="12" color="#DFDFDF" />
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{!hasGroups}}" style="text-align: center;font-size: 12px; color: #000000;line-height: 70vh; height: 80vh;">
+    没有小组信息
+  </view>
+
+  <view style="height: 85px;"></view>
+
+  <view class="operation-container">
+    <view style="width: 25%; float: left;line-height: 49px;text-indent: 1em;" bindtap="selectAll">
+      <image src="{{isSelectAll?'../../../images/checked.png':'../../../images/checkbox.png'}}" style="width: 12px; height: 12px;" /> \t全选
+    </view>
+    <view style=" width: 25%; float: left; line-height: 49px;">
+      小组: {{selectedGroup.length}}
+    </view>
+    <view style="width: 50%; float: left;">
+      <van-buttom bindtap="onSave" type="default" block custom-style="width:72px;height: 32px; line-height: 32px;font-size: 13px;float:left;margin-top: 8px;    margin-left: 15px;" bindtap="onCancel">取消
+      </van-buttom>
+      <van-buttom bindtap="onSave" color="#008BD0" type="primary" block custom-style="width:72px;height: 32px; line-height: 32px;font-size: 13px;float:left;margin-left:15px;margin-top: 8px;" bindtap="onSave">删除
+      </van-buttom>
+    </view>
+  </view>
+</view>

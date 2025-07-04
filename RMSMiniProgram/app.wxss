@@ -1,0 +1,8 @@
+view {
+  font-family: 'zeiss-cn';
+}
+
+ @font-face {
+  font-family: 'zeiss-cn';
+  src: url("https://zeissonlinetraining.blob.core.chinacloudapi.cn/font/MYingHeiPRC-W3.woff2") format('woff2');
+} 

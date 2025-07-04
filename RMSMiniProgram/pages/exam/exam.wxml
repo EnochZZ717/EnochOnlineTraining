@@ -1,0 +1,57 @@
+<wxs src="../../utils/util.wxs" module="common" />
+<view class="page">
+  <navbar page-name="{{pageName}}"></navbar>
+  <view class="exam-banner">
+    <image src="{{exam.imagePath}}" mode="aspectFill" lazy-load></image>
+  </view>
+
+  <view class="exam-description">
+    {{exam.description}}
+  </view>
+
+  <view class="exam-container">
+    <view class="exam-item" wx:for="{{questions}}" wx:key="id">
+      <view class="exam-title">
+        {{index+1}}. {{item.stem}} {{item.type=='单选'?'':'(多选题)'}}
+        <text class="not-correct" wx:if="{{!item.isCollect&&showAnswer}}">不正确</text>
+      </view>
+      <view class="exam-context">
+
+        <van-checkbox-group wx:if="{{item.type==='多选'}}" id="{{item.id}}" name="{{item.stem}}" value="{{result}}" direction="vertical" bind:change="onCheckboxChange">
+          <view wx:for="{{item.questionOptions}}" wx:key="index" wx:for-item="ops">
+            <view wx:if="{{showAnswer&&!item.isCollect}}" class="answer-container-left">
+              <van-icon name="{{common.isCollect(ops,item.answers)?'../../images/exam-collect.png':'../../images/exam-not-collect.png'}}" size="12" />
+            </view>
+            <view class="{{showAnswer?'answer-container-right':''}}">
+              <van-checkbox icon-size="12" checked-color="#008BD0" name="{{ops.id}}" shape="square" custom-class="exam-option">{{ops.optionContent}}</van-checkbox>
+            </view>
+          </view>
+        </van-checkbox-group>
+
+        <van-radio-group wx:if="{{item.type==='单选'}}" id="{{item.id}}" name="{{item.stem}}" direction="vertical" bind:change="onRadioChange">
+          <view wx:for="{{item.questionOptions}}" wx:key="index" wx:for-item="ops">
+            <view wx:if="{{showAnswer&&!item.isCollect}}" class="answer-container-left">
+              <van-icon name="{{common.isCollect(ops,item.answers)?'../../images/exam-collect.png':'../../images/exam-not-collect.png'}}" size="12" />
+            </view>
+            <view class="{{showAnswer?'answer-container-right':''}}">
+              <van-radio icon-size="12" checked-color="#008BD0" name="{{ops.id}}" custom-class="exam-option">{{ops.optionContent}}</van-radio>
+            </view>
+          </view>
+        </van-radio-group>
+      </view>
+    </view>
+
+    <view class="submit-btn-container" wx:if="{{!showAnswer}}">
+      <van-button type="info" color="#008BD0" disabled="{{isDisable}}" loading="{{submit}}" loading-text="正在提交..." custom-class="submit-btn2" bindtap="onSubmit">提交</van-button>
+    </view>
+
+    <view class="submit-btn-container" wx:if="{{showAnswer}}">
+      <van-button type="info" color="#008BD0" custom-class="submit-btn" bindtap="onReTest">重新测试</van-button>
+    </view>
+
+  </view>
+</view>
+
+<van-overlay show="{{ show }}" z-index="9999">
+
+</van-overlay>

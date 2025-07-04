@@ -1,0 +1,37 @@
+.btttonGroup{
+    display: flex !important;
+    justify-content: right !important;
+    margin-top: 10px;
+
+    .ant-btn-text{
+        padding-right: 0px;
+    }
+}
+
+.check{
+    padding-right: 16px;
+}
+
+.textBtn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666666 !important;
+    font-weight: 400;
+    padding-left: 0px;
+}
+
+.itemTitle{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: flex;
+    margin-left: 16px;
+    font-weight: 400;
+}
+
+.listcourse{
+    max-height: 500px;
+    overflow-y: auto;
+}

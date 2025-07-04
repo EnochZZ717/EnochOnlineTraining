@@ -1,0 +1,180 @@
+.exam-container {
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  height: 100%;
+}
+
+.timer {
+  float: right;
+  font-size: 13px;
+  width: 100%;
+  text-align: right;
+}
+
+.timer-icon {
+  margin-left: 10px;
+}
+
+.van-radio__label {
+  width: 100% !important;
+}
+
+.van-checkbox__label {
+  width: 100% !important;
+}
+
+.van-checkbox {
+  margin-top: 9px !important;
+}
+
+.van-radio {
+  margin-top: 9px !important;
+}
+
+.exam-context {
+  margin-top: 10px;
+  color: #000000;
+  padding-left: 15px;
+  font-size: 13px;
+}
+
+.exam-option {
+  margin-top: 5px;
+}
+
+.exam-description {
+  font-size: 13px;
+  margin-top: 15px;
+  margin-left: 4%;
+  color: #000000;
+}
+
+image {
+  width: 100%;
+  height: 168px;
+}
+
+.exam-banner {
+  width: 100%;
+}
+
+.exam-item {
+  font-size: 12px;
+  margin-top: 15px;
+  padding-bottom: 5px;
+}
+
+.submit-btn-container {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  background: #6464e0;
+  color: #fff;
+  border-radius: 5px;
+  width: 110px;
+}
+
+.cancel-btn {
+  border-radius: 5px;
+  width: 110px;
+  margin-left: 15px;
+}
+
+.submit-btn2 {
+  background: #6464e0;
+  color: #fff;
+  border-radius: 5px;
+  width: 172px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 260px;
+  height: 160px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.block-title {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.block-btn {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.margin-15 {
+  margin-left: 15px;
+}
+
+.width-88 {
+  width: 88px;
+}
+
+.correct-answer {
+  font-size: 12px;
+  font-weight: bold;
+  color: #65c765;
+}
+
+.exam-answer {
+  margin-top: 10px;
+  opacity: 0;
+  display: none;
+}
+
+.exam-answer.fadein {
+  display: block;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+.exam-title {
+  font-size: 13px;
+  color: #353D45;
+}
+
+.not-correct {
+  /* float: right; */
+  color: #008BD0;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.correct {
+  /* float: right; */
+  color: #97C900;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.answer-container-left {
+  width: 6%;
+  float: left;
+  margin-top: 2.5px;
+}
+
+.answer-container-right {
+  width: 90%;
+}

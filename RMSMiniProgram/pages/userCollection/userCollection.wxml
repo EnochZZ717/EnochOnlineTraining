@@ -1,0 +1,29 @@
+<wxs src="../../../utils/util.wxs" module="common" />
+<view class="page">
+  <navbar page-name="我的收藏"></navbar>
+
+  <view class="courses-container" wx:for="{{collections}}" wx:key="index" bindtap="onShowCourse" data-index="{{item}}" wx:if="{{!item.isCancel}}">
+    <view style="height: 7px;">
+    </view>
+    <view class="course">
+      <view class="course-img-container">
+        <image src="{{item.courseImagePath}}" mode="aspectFill" lazy-load />
+      </view>
+      <view class="course-context-container">
+        <view class="course-name">
+          {{item.courseName}}
+        </view>
+        <view class="course-favor" catchtap="onRemoveCollection" data-index="{{item}}">
+          <van-icon name="{{common.isExist(canceledCollections,item.courseId)?'../../images/collect.png':'../../images/collect-t.png'}}" size="12" color="#008BD0" />
+        </view>
+      </view>
+    </view>
+    <view style="height: 7px;">
+
+    </view>
+  </view>
+
+  <view wx:if="{{isEmpty}}" class="empty-contianer">
+    没有收藏课程
+  </view>
+</view>

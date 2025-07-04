@@ -1,0 +1,204 @@
+.custom-grid {
+  margin-bottom: 10px;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+swiper {
+  margin-bottom: 4px;
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 168px;
+}
+
+.van-col image {
+  width: 100%;
+  height: 120px;
+  margin-top: 9px;
+}
+
+form-block image {
+  width: 104px;
+  height: 64px;
+}
+
+.course {
+  height: 63px;
+}
+
+.demo-block__title {
+  margin-top: 5px;
+}
+
+.custom-col image {
+  margin-top: 5px;
+}
+
+.course-name {
+  font-size: 14px;
+  margin-top: 3px;
+  text-align: justify;
+}
+
+.search-modal {
+  width: 97%;
+  height: auto;
+  margin-bottom: 10px;
+  max-height: 150px;
+  overflow: scroll;
+}
+
+.bd {
+  width: 1px;
+  height: 50px;
+  float: left;
+  background: #ccc;
+  margin-top: 31px;
+}
+
+swiper-container {
+  position: relative;
+}
+
+.swiper-container .swiper {
+  height: 300rpx;
+}
+
+.swiper-container .swiper .img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container .dots {
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.swiper-container .dots .dot {
+  margin: 0 5rpx;
+  width: 8rpx;
+  height: 8rpx;
+  background: #ccc;
+  border-radius: 8rpx;
+  transition: all .6s;
+}
+
+.swiper-container .dots .dot.active {
+  width: 8rpx;
+  background: #265a9a;
+}
+
+.courses-container {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.course-img-container {
+  width: 30%;
+  float: left;
+}
+
+.course-context-container {
+  width: 66%;
+  float: left;
+  margin-left: 4%;
+}
+
+.no-more {
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 12px;
+  color: #969799;
+}
+
+.cloudClassroomBtn {
+  height: 112px;
+  width: 100%;
+  background: #F6F6F6;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cloudClassroomContainer-left {
+  height: 100%;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.cloudClassroomContainer-right {
+  height: 100%;
+  width: 49%;
+  float: left;
+  text-align: center;
+}
+
+.btnImage {
+  width: 40px;
+  height: 40px;
+  margin-top: 23px;
+}
+
+
+.wrapper {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+/* .filter-item {
+  background-color: #F6F6F6;
+  width: auto;
+  height: 30px;
+  margin-left: 15px;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  color: black;
+  display: inline-block;
+} */
+
+/* .filter-item-active {
+  background-color: #008BD0;
+  color: #fff;
+} */
+
+.filter-item {
+  background-color: #F6F6F6;
+  width: auto;
+  height: 30px;
+  margin-left: 15px;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 13px;
+  font-size: 13px;
+  color: #7F7F7F;
+  display: inline-block;
+
+}
+
+.filter-item-active {
+  background: rgba(53, 152, 229, 0.11);
+  color: rgb(102, 102, 102);
+}

@@ -1,0 +1,13 @@
+<page wx:if="{{showContainer}}">
+  <view style="text-align: center;width: 100%;margin-top:50%;">
+    <van-icon name="{{status=='-2'?'info':'success'}}" size="50" color="{{status=='-2'?'#fca130':'#59de59'}}" />
+  </view>
+  <view style="text-align: center;margin-top: 15px;margin-left: 5%;margin-right: 5%;height: 150px;    font-size: 14px;">
+    {{message}}
+  </view>
+ 
+  <view style="text-align: center;margin-top: 15%;">
+    <van-buttom bindtap="goMemberGroup" color="#008BD0" type="primary" block custom-style="width:88px;height: 44px; line-height: 32px;font-size: 13px;">{{status == '-2'?'返回首页':'查看'}}
+    </van-buttom>
+  </view>
+</page>

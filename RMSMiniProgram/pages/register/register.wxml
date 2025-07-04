@@ -1,0 +1,169 @@
+<navbar page-name="注册" showNav="{{false}}"></navbar>
+<view class='view-page'>
+  <view class='page-content'>
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputUserName }}" maxlength="32" label="用户名" focus="{{userNameFocus?true:false}}" bind:confirm="compeleteUserNameInput" bind:change="userNameChange" input-align="right" label-class="{{userNameErrorMessage!=''?'input-error':''}}" required="{{userNameErrorMessage!=''? true:false}}" />
+      </van-cell-group>
+    </form-block>
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputPhoneNumber }}" maxlength="11" label="手机号" focus="{{phoneNumberFocus?true:false}}" bind:confirm="compeletePhoneNumberInput" bind:change="phoneNumberChange" input-align="right" label-class="{{phoneNumberErrorMessage!=''?'input-error':''}}" required="{{phoneNumberErrorMessage!=''? true:false}}">
+          <van-buttom wx:if="{{displayGetPhoneNumberOps}}" icon="wechat" type="primary" block custom-style="color: #633b3b6b;background: #fff; border: none; text-align: right;padding: 0;height: 16px;" slot="right-icon" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> </van-buttom>
+        </van-field>
+      </van-cell-group>
+    </form-block>
+
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputEmail }}" maxlength="32" label="邮箱" focus="{{emailFocus?true:false}}" bind:confirm="compeleteEmailInput" bind:change="emailChange" input-align="right" label-class="{{emailErrorMessage!=''?'input-error':''}}" required="{{emailErrorMessage!=''? true:false}}" />
+      </van-cell-group>
+    </form-block>
+
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputTitle }}" maxlength="32" label="职称" focus="{{titleFocus?true:false}}" bind:confirm="compeleteTitleInput" bind:change="titleChange" input-align="right" label-class="{{titleErrorMessage!=''?'input-error':''}}" required="{{titleErrorMessage!=''? true:false}}" />
+      </van-cell-group>
+    </form-block>
+
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputCompanyTypeName }}" label="企业类型" bindtap="getCompanyType" readonly input-align="right" label-class="{{companyTypeErrorMessage!=''?'input-error':''}}" required="{{companyTypeErrorMessage!=''? true:false}}" />
+
+        <van-popup show="{{ showCompanyTypePopup  }}" position="bottom">
+          <van-picker show-toolbar columns="{{ compantTypes }}" default-index="{{ 0 }}" bind:change="onChangeCompanyType" bind:confirm="onConfirmCompanyType" bind:cancel="onCompanyType" error-message="{{companyTypeErrorMessage}}" />
+        </van-popup>
+      </van-cell-group>
+    </form-block>
+
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputCompany }}" maxlength="32" label="单位" focus="{{companyFocus?true:false}}" bind:confirm="compeleteCompanyInput" bind:change="companyChange" input-align="right" label-class="{{companyErrorMsesage!=''?'input-error':''}}" required="{{companyErrorMsesage!=''? true:false}}" />
+      </van-cell-group>
+    </form-block>
+
+    <!-- 科研机构 -->
+    <form-block title="" wx:if="{{inputCompanyTypeName=='科研机构'}}">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputSchool }}" maxlength="64" label="学院/课题组" bind:change="schoolChange" input-align="right" label-class="{{schoolErrorMsesage!=''?'input-error':''}}" required="{{schoolErrorMsesage!=''? true:false}}" />
+      </van-cell-group>
+    </form-block>
+
+    <!-- 医院 -->
+    <form-block title="" wx:if="{{inputCompanyTypeName=='医院'}}">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputOffice }}" maxlength="64" label="科室" bind:change="officeChange" input-align="right" label-class="{{officeErrorMsesage!=''?'input-error':''}}" required="{{officeErrorMsesage!=''? true:false}}" />
+      </van-cell-group>
+    </form-block>
+
+    <!-- 工业 -->
+    <form-block title="" wx:if="{{inputCompanyTypeName=='工业(新材料产业，半导体等)'||inputCompanyTypeName=='工业'}}">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputDepartment }}" maxlength="64" label="部门" bind:change="departmentChange" input-align="right" label-class="{{departmentErrorMsesage!=''?'input-error':''}}" required="{{departmentErrorMsesage!=''? true:false}}" />
+      </van-cell-group>
+    </form-block>
+
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputIndustryName }}" label="所属行业" bindtap="getIndustry" readonly="{{disableIndustryInput}}" input-align="right" label-class="{{industryErrorMessage!=''?'input-error':''}}" required="{{industryErrorMessage!=''? true:false}}" focus="{{inputIndustryFocus}}" bind:change="industryChange" />
+        <van-popup show="{{ showIndustryPopup  }}" position="bottom">
+          <van-picker show-toolbar columns="{{ industries }}" default-index="{{ 0 }}" bind:change="onChangeIndustry" bind:confirm="onConfirmIndustry" bind:cancel="onCancelIndustry" error-message="{{industryErrorMessage}}" />
+        </van-popup>
+      </van-cell-group>
+    </form-block>
+
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputSns }}" label="设备序列（SN）号" bindtap="getSns" readonly input-align="right">
+          <!-- <van-icon name="../../images/sn-guide.png" color="#4D4D4D" size="16" slot="right-icon" catchtap="onSnGuide" /> -->
+        </van-field>
+        <van-popup maxHeight="450px" show="{{ showSnPopup }}" round position="bottom" custom-style="height: 80%" bind:close="onCloseSnPopup">
+          <view class="sn-tips-container" bindtap="onSnGuide">
+            <!-- <van-buttom bindtap="onCloseSnPopup" type="primary" size="mini" round custom-style="margin-top: 10px;margin-button:10px;float:right;margin-right: 10px;">完成
+        </van-buttom> -->
+            点击此处查看<text style="color: #008BD0;font-weight: bold;">如何找到序列号?</text>
+          </view>
+          <view>
+            <van-field value="{{ inputSn }}" type="number" maxlength="24" center clearable placeholder="请输入SN号" bind:change="onSnChange" bind:confirm="onCompleteSnInput" input-class="sn-input">
+              <van-icon name="plus" color="#9B9B9B" size="20" slot="right-icon" catchtap="onCompleteSnInput" />
+            </van-field>
+          </view>
+          <scroll-view scroll-y style="max-height: 280px;">
+            <!-- <van-cell wx:for="{{inputSns}}" wx:key="index" title="{{item}}">
+              <van-icon slot="right-icon" name="delete" bind:click="onRemoveSn" data-index="{{item}}" />
+            </van-cell> -->
+            <view class="sn-cell" wx:for="{{inputSns}}" wx:key="index" title="{{item}}">
+              <view style="width: 95%;">
+                <view class="sn-cell-title">
+                  {{item}}
+                </view>
+              </view> 
+              <van-icon slot="right-icon" name="delete-o" bind:click="onRemoveSn" data-index="{{item}}" size="20" color="#3D3D3D" />
+            </view>
+          </scroll-view>
+        </van-popup>
+      </van-cell-group>
+    </form-block>
+
+
+    <form-block title="">
+      <van-cell-group border="{{ false }}">
+        <van-field value="{{ inputArea }}" label="区域" readonly bindtap="getArea" input-align="right" label-class="{{areaErrorMessage!=''?'input-error':''}}" required="{{areaErrorMessage!=''? true:false}}" />
+        <van-popup show="{{ showAreaPopup  }}" position="bottom">
+          <van-picker show-toolbar columns="{{ areaColumns }}" bind:change="onChange" bind:change="onChangeArea" bind:confirm="onConfirmArea" bind:cancel="onCancelArea" />
+        </van-popup>
+      </van-cell-group>
+    </form-block>
+
+    <form-block title="" style="margin-top: 15px;">
+      <view style="padding-left: 16px; font-size: 12px;">
+        <van-checkbox name="description" value="{{checkDescription}}" bind:change="onChangeDescription" shape="square">是的，我希望继续成为该营销邮件的忠实读者，并接收有关蔡司显微镜产品和服务的新闻及信息。</van-checkbox>
+      </view>
+    </form-block>
+
+    <form-block title="" style="margin-top: 15px;">
+      <view style="padding-left: 16px; font-size: 12px;">
+        <van-checkbox name="statement" value="{{checkStatement}}" bind:change="onChangeStatement" shape="square">我已阅读并接受<text style="margin-left: 5px;color: #008BD0;font-weight: bold;" catchtap="getStatement">《数据保护声明》</text></van-checkbox>
+      </view>
+    </form-block>
+
+    <van-popup maxHeight="280px" show="{{ showStatumentPopup }}" round position="bottom" custom-style="height: 80%" bind:close="onCloseSnPopup">
+      <view class="statement-title-container">
+        <view style=" width: 100%;height: 20px;">
+          <view style="width: 6%;float: left;">
+            <van-icon name="/images/logo2.png" color="#4D4D4D" size="13" />
+          </view>
+          <view class="statement-title">蔡司空中教室 提醒</view>
+        </view>
+
+        <view style="font-weight: bold;margin-top: 15px;">
+          为了能给你提供更好的服务
+        </view>
+
+        <view style="margin-top: 15px;font-size: 13px;text-align: justify;">
+          允许我们在必要场景下, 合理使用你的个人信息, 并且充分保障你的合法权益。
+        </view>
+
+        <view style="margin-top: 15px; font-size: 13px;color: #008BD0;" bindtap="getStatement">
+          《数据保护声明》
+        </view>
+      </view>
+      <view style="display: flex;justify-content: center; margin-top: 10px;">
+        <van-buttom bindtap="rejectStatement" color="#f2f2f2" type="default" block custom-style="width: 100px;margin-top: 10px;margin-button:10px;float:left;border-radius: 5px;color:#06ae56;font-weight:bold;height: 40px;">拒绝
+        </van-buttom>
+
+        <van-buttom bindtap="agreeStatement" color="#07c160" type="primary" block custom-style="width: 100px;margin-top: 10px;margin-button:10px;;float:left;margin-left: 15px;border-radius: 5px;font-weight:bold;height: 40px;">同意
+        </van-buttom>
+      </view>
+    </van-popup>
+
+    <form-block title="" style="margin-top: 25px;"> 
+      <van-buttom bindtap="register" disabled="{{isDisable}}" loading="{{submit}}" loading-text="正在提交..." color="#008BD0" type="primary" block custom-style="width: 140px;margin-top: 10px;margin-button:10px;">注册
+      </van-buttom>
+    </form-block>
+
+    <view style="height: 15px;"></view>
+    <van-toast id="van-toast" />
+
+  </view>
+</view>

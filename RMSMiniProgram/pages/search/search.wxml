@@ -1,0 +1,83 @@
+<view class='view-page'>
+  <navbar page-name="课程搜索"></navbar>
+  <view class='page-content'>
+    <van-search value="{{ searchValue }}" bind:change="onSearchChange" bind:search="onSearch" placeholder="搜索课程" />
+    <!-- <view id="filterText">
+      搜索"<text style="color:#6a6ae0">{{lastSearchText}}</text>", 找到{{total}}门课程
+    </view> -->
+    <view class="container">
+      <view wx:if="{{courses.publicCourses.length>0}}">
+        <view class="course-container-title">
+          云课堂
+        </view>
+        <view class="courses-container" wx:for="{{courses.publicCourses}}" wx:key="index" bindtap="onShowCourse" data-index="{{item}}">
+          <view style="height: 5px;">
+
+          </view>
+          <view class="course" hover-class="navigator-hover" bindtap="onShowCloudClassroom" data-index="{{item}}">
+            <view class="course-img-container">
+              <image src="{{item.coverImage.contentPath}}" mode="aspectFill" lazy-load />
+            </view>
+            <view class="course-context-container">
+              <view class="course-name">
+                {{item.name}}
+              </view>
+            </view>
+          </view>
+          <view style="height: 5px;">
+
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{courses.opeartionCourses.length>0}}">
+        <view class="course-container-title">
+          操作指南
+        </view>
+        <view class="courses-container" wx:for="{{courses.opeartionCourses}}" wx:key="index" bindtap="onShowCourse" data-index="{{item}}">
+          <view style="height: 5px;">
+
+          </view>
+          <view class="course" hover-class="navigator-hover" bindtap="onShowOperationCourse" data-index="{{item}}">
+            <view class="course-img-container">
+              <image src="{{item.coverImage.contentPath}}" mode="aspectFill" lazy-load />
+            </view>
+            <view class="course-context-container">
+              <view class="course-name">
+                {{item.name}}
+              </view>
+            </view>
+          </view>
+          <view style="height: 5px;">
+
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{courses.currentMemberGroupCourses.length>0}}">
+        <view class="course-container-title">
+          学习小组
+        </view>
+        <view class="courses-container" wx:for="{{courses.currentMemberGroupCourses}}" wx:key="index" bindtap="onShowCourse" data-index="{{item}}">
+          <view style="height: 5px;">
+          </view>
+          <view class="course" hover-class="navigator-hover" bindtap="onShowCourseDetail" data-index="{{item}}">
+            <view class="course-img-container">
+              <image src="{{item.coverImage.contentPath}}" mode="aspectFill" lazy-load />
+            </view>
+            <view class="course-context-container">
+              <view class="course-name">
+                {{item.name}}
+              </view>
+            </view>
+          </view>
+          <view style="height: 5px;">
+
+          </view>
+        </view>
+      </view>
+      <view style="display: {{hasData?'none':'block'}};" class="empty-contianer">
+        没有找到相应的课程
+      </view>
+    </view>
+
+  </view>
+</view>

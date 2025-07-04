@@ -1,0 +1,83 @@
+<wxs src="../../utils/util.wxs" module="common" />
+<view class='view-page'>
+  <navbar page-name="云课堂"></navbar>
+  <view class='page-content'>
+    <van-search value="{{ searchValue }}" bind:change="onSearchChange" bind:search="onSearch" placeholder="搜索课程"
+      bind:focus="onActiveInput" />
+    <view id="tempModal">
+
+    </view>
+    <van-overlay show="{{ showModal }}" bind:click="onClickHide" top="{{modalLocation}}">
+      <view class="wrapper">
+        <view class="block">
+          <view class="search-modal">
+            <view wx:for="{{hotKeys}}" wx:key="index" class="search-item {{searchValue==item?'filter-item-active':''}}"
+              bindtap="onHotKeySearch" data-value="{{item}}">
+              {{item}}</view>
+          </view>
+        </view>
+      </view>
+    </van-overlay>
+
+    <view>
+      <van-dropdown-menu active-color="#000000">
+        <van-dropdown-item title="排序" value="{{ sortValue }}" options="{{ sortOptions }}" bind:change="onSortChange" />
+        <van-dropdown-item title="课程" id='item'>
+          <view style="max-height: 250px;overflow: scroll;">
+            <view wx:for="{{categories}}" wx:key="index" >
+              <view class="course-category-title">{{item.name}}</view>
+              <view style="width: 97%;height: auto;margin-bottom: 10px;">
+                <view wx:for="{{item.subNames}}" wx:key="index" wx:for-item="subItem"
+                  class="filter-item {{common.isExist(activeCategories,subItem.id)?'filter-item-active':''}}"
+                  bindtap="onCategoryActive" data-value="{{subItem}}">
+                  {{subItem.name}}</view>
+              </view>
+            </view>
+            <view style="height:10px;">\t</view>
+          </view>
+         <view style="text-align: center; margin-bottom: 15px; margin-top: 15px;">
+            <van-button type="default" size="small" custom-class="cancel-btn" bind:click="onReset">重置</van-button>
+            <van-button type="info" size="small" color="#008BD0" custom-class="submit-btn" bind:click="onSubmit">确定</van-button> 
+    </view> 
+    </van-dropdown-item>
+    </van-dropdown-menu>
+  </view>
+
+  <scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="onRefreshByPage" enable-flex
+    style="height:{{scoreViewHeight}};" bindscroll="{{null}}" scroll-into-view="{{null}}" scroll-top="{{null}}"
+    bindscrolltoupper="{{null}}" refresher-enabled refresher-background="#fff" bindrefresherrefresh="onRefresh"
+    refresher-triggered="{{refreshTriggered}}" refresher-threshold="{{50}}" scroll-y="{{true}}" lower-threshold="{{50}}"
+    scroll-anchoring="{{true}}">
+    <view class="courses-container" wx:for="{{courses}}" wx:key="index" bindtap="onShowCourse" data-index="{{item}}"
+      hover-class="navigator-hover">
+      <view style="height: 7px;">
+
+      </view>
+      <view class="course">
+        <view class="course-img-container">
+          <image src="{{item.coverImage.contentPath}}" mode="aspectFill" lazy-load />
+        </view>
+        <view class="course-context-container">
+          <view class="course-name">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+      <view style="height: 7px;">
+
+      </view>
+    </view>
+
+    <view style="display: {{hasData?'none':'block'}};" class="empty-contianer">
+      没有找到相应的课程
+    </view>
+
+    <view style="width:100%;text-align:center;height:40px;display:{{refreshActive?'block':'none'}};">
+      <van-loading size="12px" class="no-more" wx:if='{{ hasMore}}'>加载中...</van-loading>
+      <view class="no-more" wx:else>没有更多了...</view>
+    </view>
+  </scroll-view>
+
+</view>
+<tabbar active="classroom" />
+</view>

@@ -1,0 +1,15 @@
+<page>
+  <view style="text-align: center;width: 100%;margin-top:50%;">
+    <van-icon name="warning" size="50" color="#fa5151" />
+  </view>
+  <!-- <view style="text-align: center;margin-top: 15px;font-weight: bold;">
+    {{typeMessage}}
+  </view> -->
+  <view style="text-align: center;margin-top: 15px;margin-left: 5%;margin-right: 5%;height: 150px;    font-size: 14px;">
+    {{detail}}
+  </view>
+
+  <view style="text-align: center;margin-top: 15%;" wx:if="{{type=='NoPermission'||type=='NotFound'}}">
+    <van-button type="primary" bind:click="backToHome" color="#008BD0">回到首页</van-button>
+  </view>
+</page>

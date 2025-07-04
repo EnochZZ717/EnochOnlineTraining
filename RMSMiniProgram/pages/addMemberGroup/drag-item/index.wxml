@@ -1,0 +1,25 @@
+<view>
+	<view class="cell">
+		<view class="courses-container" bindtap="onShowCourse" data-index="{{item}}">
+			<view style="height: 7px;">
+			</view>
+			<view class="course">
+				<view class="course-img-container">
+					<image src="{{itemData.imagePath}}" mode="aspectFill" lazy-load style=" width: 104px;height: 64px;" />
+				</view>
+				<view class="course-context-container">
+					<view class="course-name">
+						{{itemData.name}}
+					</view>
+					<view class="course-favor" catchtap="onRemoveCollection" data-index="{{item}}">
+						<view style="float: left;margin-right: 30px;    color: #666666;">长按排序</view>
+						<view style="float: left;    color: #666666;" catchtap="removeCourse" data-value="{{itemData}}">删除</view>
+					</view>
+				</view>
+			</view>
+			<view style="height: 7px;">
+
+			</view>
+		</view>
+	</view>
+</view>

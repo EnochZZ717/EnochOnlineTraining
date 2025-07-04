@@ -1,0 +1,33 @@
+body {
+  margin: 0 auto;
+  font-family: 'zeiss-font';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 660px;
+  font-weight: 600;
+}
+  
+  :root {
+  overflow-y: auto;
+  overflow-x: hidden;
+  }
+  
+  :root body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  }
+  
+  body {
+  width: 100vw;
+  }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'zeiss-font';
+  src: url('MYingHeiPRC-W3.ttf');
+}

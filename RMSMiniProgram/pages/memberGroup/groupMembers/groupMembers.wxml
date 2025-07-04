@@ -1,0 +1,43 @@
+<view class='view-page' bindtap="onCloseOperationContainer">
+  <navbar page-name="{{name}}"></navbar>
+  <view class='page-content'>
+    <view class="operation-container">
+      <view class="add-container" style="margin-left: 5px;">
+        <van-buttom icon="/images/invite.png" open-type="share" color="#008BD0" type="primary" block custom-style="    font-size: 12px;line-height: 14px;    height: 40px;color: #000000;  background: #fff;border: none;">邀请
+        </van-buttom>
+      </view>
+    </view>
+
+    <view class="group-container" wx:for="{{users}}" wx:key="index" data-index="{{item}}">
+      <view class="container-left" catchtap="showImage" data-index="{{item}}">
+        <image src="{{item.profileImagePath}}" />
+      </view>
+      <view class="container-right" style="{{users.length-1==index?'border-bottom:none':''}}">
+        <view class="group-name">
+          {{item.userName}}
+        </view>
+        <view class="group-detail">
+          <view class="group-menber">完成:{{item.completeCount}}</view>
+          <view class="group-course">未完成:{{item.unCompleteCount}}</view>
+          <view class="group-progress">进度:{{item.completePercent}}%</view>
+        </view>
+        <view class="group-icon" catchtap="onShowOperation" data-index="{{item}}">
+          <van-icon name="/images/operation.png" size="16" color="#DFDFDF" />
+          <view class="operation-container2" wx:if="{{activeUser.userId==item.userId}}">
+            <van-buttom open-type="share" color="#fff" type="default" block custom-style="    font-size: 12px;  height: 31px;color: #000000;  background: #fff;border: none;">提醒学习 </van-buttom>
+            <!-- <view class="operation-container2-item">提醒学习</view> -->
+            <view class="middle-line"></view>
+            <!-- <view class="operation-container2-item" catchtap="onRemoveUser" data-index="{{item}}">移除</view> -->
+            <van-buttom color="#fff" type="default" block bindtap="onRemoveUser" custom-style="    font-size: 12px;    height: 31px;color: #000000;  background: #fff;border: none;" data-index="{{item}}">移除 </van-buttom>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- <view style="margin: 4rpx;">
+      <drag id="drag" generic:item="drag-item" bind:click="onShowOperation" bind:change="change" bind:sortend="sortEnd" bind:scroll="scroll" item-wrap-class="drag-item-wrap" extra-nodes="{{emptyList}}" list="{{listData}}" list-data="{{listData}}" columns="{{size}}" scroll-top="0" item-height="65" top-size="110">
+      </drag>
+    </view> -->
+
+  </view>
+</view>

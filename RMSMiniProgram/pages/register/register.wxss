@@ -1,0 +1,139 @@
+.page-content {
+  height: 100%;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.row-height {
+  height: 18vh;
+}
+
+.row-style {
+  overflow: hidden;
+  height: 100%;
+  text-align: center;
+}
+
+.border-style {
+  border-bottom: 2px solid #22228c;
+}
+
+.border-style-default {
+  border-bottom: 1px solid #DFDFDF;
+}
+
+/* input:hover {
+  border-bottom: 2px solid #22228c !important;
+} */
+
+input {
+  /* border-bottom: 0.5px solid #DFDFDF !important; */
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+/* .sn-input {
+  border-bottom: 2px solid #22228c !important;
+} */
+
+.sn-tips-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 13px;
+}
+
+form-block {
+  margin-top: 30px;
+  display: block;
+}
+
+.van-cell {
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+.van-field__error-message {
+  font-size: 12px !important;
+  color: #FF0000 !important;
+}
+
+/* .van-field__body {
+  border-bottom: 0.5px solid #DFDFDF !important;
+} */
+
+.sn-cell {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px;
+  padding: var(--cell-vertical-padding, 10px) var(--cell-horizontal-padding, 16px);
+  font-size: 14px;
+  font-size: var(--cell-font-size, 14px);
+  line-height: 24px;
+  line-height: var(--cell-line-height, 24px);
+  color: #323233;
+  color: var(--cell-text-color, #323233);
+  background-color: #fff;
+  background-color: var(--cell-background-color, #fff);
+  border-bottom: 1px solid #eee;
+  padding: 8px 16px;
+}
+
+.sn-cell-title {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.van-field__label {
+  color: #000000 !important;
+  font-size: 14px !important;
+  width: 120px !important;
+}
+
+.van-cell {
+  line-height: 30px !important;
+}
+
+input {
+  height: 30px !important;
+  line-height: 30px !important;
+}
+
+.input-error {
+  color: #FF0000 !important;
+}
+
+.validation-option {
+  color: #FF0000 !important;
+}
+
+.statement-title-container {
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.statement-title {
+  width: 50%;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.van-cell__title {
+  max-width: none !important;
+  min-width: none !important;
+  margin-right: none !important;
+}
+
+.van-icon-plus {
+  color: #9B9B9B;
+  font-size: 20px;
+  width: 40px;
+  line-height: 30px;
+  text-align: right;
+} 

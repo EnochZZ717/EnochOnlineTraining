@@ -1,0 +1,100 @@
+@media (max-width:415px){
+
+    .main_view{
+        margin: 20px 0px auto 0px;
+
+        .ant-form .ant-form-item .ant-form-item-label, .ant-form .ant-form-item .ant-form-item-control{
+            max-width: 50%;
+            padding-bottom: 0px !important;
+            line-height: 43px;
+        }
+    }
+
+    .main_view_register{
+        margin: 20px 20px auto 20px;
+
+        .ant-form .ant-form-item .ant-form-item-label, .ant-form .ant-form-item .ant-form-item-control{
+            max-width: 50%;
+            padding-bottom: 0px !important;
+            line-height: 43px;
+        }
+    }
+}
+
+@media (min-width:415px){
+
+    .main_view, .main_view_register{
+        margin: 20px 100px auto 100px;
+    }
+}
+
+.main_view, .main_view_register {
+
+    >div{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .ant-btn-primary{
+        width: 120px;
+        margin: 20px auto 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ant-form-item-label{
+        text-align: left;
+    }
+
+    .ant-form-item-control, .ant-input-borderless{
+        text-align: right;
+    }
+
+    .ant-cascader-picker-label, .ant-cascader-input{
+        padding: 0 30px 0 0px !important;
+    }
+
+    .ant-cascader-input{
+        text-align: right;
+    }
+
+    .ant-form-item{
+        margin-bottom: 0px;
+        border-bottom: 1px solid #dfdfdf;
+        line-height: 43px;
+    }
+
+    .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+        display: none;
+    }
+
+    .defineCard{
+        margin: 10px auto;
+    }
+
+    .ant-form-item-explain.ant-form-item-explain-error{
+        display: none;
+    }
+    
+    .ant-form-item-has-error > .ant-form-item-label .ant-form-item-required{
+        color: #ff4d4f;
+    }
+
+    .ant-form-item-has-error > .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+        display: block;
+    }
+
+    .ant-form-item-explain, .ant-form-item-extra {
+        display: none;
+    }
+
+    .ant-form-item-has-error .ant-select:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+        background-color: #fff;
+        border: none !important;
+    }
+}
+
+.snList{
+    max-height: 300px;
+    overflow-y: auto;
+}

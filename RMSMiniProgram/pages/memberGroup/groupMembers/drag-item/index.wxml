@@ -1,0 +1,27 @@
+<view>
+	<view class="cell">
+		<view class="group-container" wx:key="index" data-index="{{item}}">
+			<view class="container-left">
+				<image src="{{itemData.profileImagePath}}" />
+			</view>
+			<view class="container-right">
+				<view class="group-name">
+					{{itemData.userName}}
+				</view>
+				<view class="group-detail">
+					<view class="group-menber">完成:{{itemData.completeCount}}</view>
+					<view class="group-course">未完成:{{itemData.unCompleteCount}}</view>
+					<view class="group-progress">进度:{{itemData.completePercent}}%</view>
+				</view>
+				<view class="group-icon" catchtap="onShowOperation" data-index="{{itemData}}">
+					<van-icon name="/images/operation.png" size="16" color="#DFDFDF" />
+					<view class="operation-container2" wx:if="{{activeUser.userId==itemData.userId}}">
+						<view class="operation-container2-item">提醒学习</view>
+						<view class="middle-line"></view>
+						<view class="operation-container2-item" catchtap="onRemoveUser" data-index="{{itemData}}">移除</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

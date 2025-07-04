@@ -1,0 +1,13 @@
+{
+    "usingComponents": {
+        "van-icon": "@vant/weapp/icon/index",
+        "navbar": "/components/commom-navbar/index",
+        "van-share-sheet": "@vant/weapp/share-sheet/index",
+        "van-overlay": "@vant/weapp/overlay/index",
+        "van-sticky": "@vant/weapp/sticky/index",
+        "van-loading": "@vant/weapp/loading/index",
+        "van-buttom": "@vant/weapp/button/index",
+        "register-modal": "/components/register-popup/index"
+    },
+    "backgroundColor": "#F6F6F6"
+}

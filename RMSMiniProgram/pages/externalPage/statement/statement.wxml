@@ -1,0 +1,651 @@
+<view class="page">
+  <navbar page-name="数据保护声明"></navbar>
+  <view class="container">
+
+    <image src="https://www.zeiss.com.cn/data-protection/home/j/m/section_973a/sectionpar/column_control/column/columnpar/visibilitycontainer/wrapperpar/image/image.pic.m.1611240577548.jpg/ourcompany.jpg" />
+
+    <view class="company-name">
+      蔡司集团
+    </view>
+    <view class="data-protection">
+      数据保护
+    </view>
+    <view class="data-protection-des">
+      信息涉及蔡司在线服务（网站、应用程序、社交网络）如何收集和处理您的个人信息
+    </view>
+
+    <view class="description">
+      下述《数据保护概述》资料页简要概述了蔡司在线服务（网站、应用程序、社交网络）收集和处理您的个人数据的情况。有关此过程的全部内容，请参阅我们的数据保护声明的完整版本。</view>
+
+    <view class="border">
+    </view>
+
+    <view class="data-protection-title">数据保护概述
+    </view>
+
+    <van-collapse accordion value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="我们收集哪些信息?" name="1" custom-class="custom-collapse-2">
+        <view style="font-weight: bold; color: #262626;font-size: 16px;    "> I. 当您打开和/或使用我们的在线服务时，收集的信息包括：</view>
+        <view class="dots">
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">您使用的浏览器类型</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">您在我们的网站上访问的网页</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">操作系统</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">您的IP地址或缩短的IP地址</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">用户行为（例如：鼠标移动、点击行为、会话持续时间等）</view>
+          </view>
+        </view>
+
+        <view style="font-weight: bold; color: #262626;margin-top: 30px;font-size: 16px;"> II. 如果您已在我们的网站上注册，且已自愿提供与自己有关的信息，其中包括：</view>
+        <view class="dots" style="    margin-bottom: 15px;">
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">名字、姓氏和称呼</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">支付信息</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">联系信息（例如：邮箱、手机）</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">公司、团队任务</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">您使用的产品和设备</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">个人兴趣和偏好</view>
+          </view>
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="蔡司在线服务如何收集信息？" name="2" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px; ">
+          蔡司在线服务使用各种类型的Cookie或具有不同功能的跟踪技术。它们可以仅执行技术功能，同时还能帮助优化网页，与社交媒体进行互动，以及优化我方和合作伙伴方的与使用相关的广告。因此，我们还向合作伙伴提供用于分析、营销和社交媒体目的的信息。您可以在任何时间以及不同阶段反对使用这些技术。单击“设置”，选择您的个人Cookie设置：
+        </view>
+
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px; ">
+          数据由蔡司在线服务通过自动处理或用户输入收集，例如，借助于：
+        </view>
+        <view class="dots" style="    margin-bottom: 15px;">
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">Cookie跟踪像素</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">直接用户输入</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">跨设备跟踪、鼠标跟踪及类似的方法</view>
+          </view>
+        </view>
+
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px; ">
+          注意：有关Cookie和其他互联网技术的其他信息可在我们的数据保护声明中查找。
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="蔡司在线服务为什么处理并使用我的个人信息？蔡司在线服务何时处理并使用我的个人信息？" name="3" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          请注意，蔡司只会根据具体情况和特定目的收集个人信息。因此，以下列举的原因并非完整无遗。
+        </view>
+        <view style="margin-bottom: 15px;">
+          <view style="margin-top: 5px;">
+            1.用于提供我们的产品和服务
+          </view>
+          <view style="margin-top: 5px;">
+            2.遵守法律义务
+          </view>
+          <view style="margin-top: 5px;">
+            3.在处理使用不安全付款方式的付款时进行信用检查
+          </view>
+          <view style="margin-top: 5px;">
+            4.为了防止购买欺诈行为
+          </view>
+          <view style="margin-top: 5px;">
+            5.用于促销目的
+          </view>
+          <view style="margin-top: 5px;">
+            6.用于网站分析并改进我们的网站
+          </view>
+          <view style="margin-top: 5px;">
+            7.用于竞争
+          </view>
+          <view style="margin-top: 5px;">
+            8.用于通讯和其他订阅
+          </view>
+          <view style="margin-top: 5px;">
+            9.用于在线应用程序
+          </view>
+          <view style="margin-top: 5px;">
+            10.用于联系目的和联系表格
+          </view>
+          <view style="margin-top: 5px;">
+            11.在使用诸如蔡司ID之类的保护区域期间以及用于验证
+          </view>
+          <view style="margin-top: 5px;">
+            12.用于在线商店
+          </view>
+          <view style="margin-top: 5px;">
+            13.在请求期间
+          </view>
+          <view style="margin-top: 5px;">
+            14.在使用蔡司数字服务期间，例如平台、订阅/取消订阅新闻简报以及使用应用程序期间
+          </view>
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          我们了解，认真处理您的个人信息对您来说非常重要。由于数据保护是蔡司优先考虑的问题，因此，我们会确保严格按照法律收集、处理和使用您的个人信息。上面所列内容是我们要求您提供个人信息的实例。
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;margin-bottom: 30px;">
+          请向我们提供您的电子邮件地址，以方便我们与您联系，这要比普通邮件更快。如果您已明确授权，您的地址将仅用于推送广告。
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="处理个人数据的法律依据?" name="4" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          我们仅根据适用法律处理您的数据。具体而言，我们将根据欧盟《一般数据保护条例》（GDPR）第6条和第9条以及GDPR第7条中的同意条件处理您的数据。我们将根据以下法律依据处理您的数据。请注意，这不是一份完整或详尽的法律依据清单。这些仅是令法律基础更加透明的示例。
+        </view>
+        <view class="dots" style="    margin-bottom: 15px;">
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">同意（GDPR第6条第1款第1句第a点和GDPR第7条或第9条第2款第a点，以及GDPR第7条）：我们仅会在事先征得您明确自愿同意的基础上处理特定数据。您有权随时撤销您的同意，且随后即可生效。</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">履行合同/合同前措施（GDPR第6条第1款第1句第b点）：我们需要访问某些数据，以启动或履行与蔡司及蔡司合作伙伴的合同。</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">遵守法律义务（GDPR第6条第1款第1句第c点）：蔡司需遵守一系列法律要求。为了满足这些要求，我们必须处理特定数据。</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">保护合法利益（第6条第1款第1句第f点）：蔡司将处理具体数据，以保护自身或第三方利益。但这仅适用于您的个人利益不凌驾于其他合法利益之上的情况。</view>
+          </view>
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="将在哪里处理我的个人信息?" name="5" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          通常，您的信息将在位于德国的服务器上处理。如果允许，您的信息也可能在德国以外的国家进行处理。用户信息部分由蔡司聘请的外部公司处理。
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          在蔡司集团内部转发数据（如允许）、向国外传输数据和与外部合作伙伴处理数据时，蔡司遵守适用的数据保护法律，并尽可能通过可用的数据保护手段（包括数据处理合同、欧盟标准合同条款和国际公约）保护这些活动。若国外当地的要求未达到《欧盟基本权利宪章》规定的保护程度，蔡司将努力采取适当措施，将处理个人数据的风险降至最低。
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="我拥有哪些权利?" name="6" custom-class="custom-collapse">
+        <view class="dots" style="    margin-bottom: 15px;">
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">知情权</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">反对权，包括撤回异议的权利</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">删除或发布/传输信息的权利</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">限制或阻止信息处理的权利</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">更正信息的权利</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">通过负责任的监管机构上诉的权利</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">撤回您的同意的权利</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">不受完全基于自动处理（包括分析）决定的权利</view>
+          </view>
+        </view>
+
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          如果您有数据保护方面的问题，请联系：
+        </view>
+        <view style=" color: #262626; font-size: 16px; ">
+          企业数据保护官（Corporate Data Protection Officer）
+        </view>
+        <view style=" color: #262626; font-size: 16px; ">
+          Carl-Zeiss-Straße 22
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          73447 Oberkochen
+        </view>
+
+        <view style=" color: #262626; font-size: 16px; ">
+          通过电子邮件联系（请勿发送机密信息）：
+        </view>
+        <view style=" color: #262626; font-size: 16px;margin-bottom: 15px; ">
+          通过电话联系：+49 7364 20-0 （关键字"数据保护"）
+        </view>
+
+      </van-collapse-item>
+      <van-collapse-item title="我的个人信息何时会被删除?" name="7" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          当不再需要收集信息时，我们会删除您的个人信息；这可能包括已终止的合同执行过程中收集的信息。为遵守商业和税务法律及其他法律规定，可能有必要延长个人信息的存储时间并超出信息收集所规定的期限，或在收集之初便将信息封锁，以供日后处理之用。这对于法律诉讼的主张、行使权利和辩护也有必要。
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="蔡司如何保护我的个人信息?" name="8" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          当您登录到特殊保护区域时（例如通过蔡司ID或进入网上商店），或者注册参加比赛或下单时，您的个人信息将被传输给我们。为了确保您的信息不会误落他人之手，我们采用最先进的标准方法（如SSL加密 - 安全套接字层）进行加密。这是一种经过验证的在互联网上传输信息的安全方法。
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          蔡司还采用了一系列其他技术和操作上的安全措施，以确保为合作伙伴和客户提供个人数据保护。结合这些安全措施，我们可能会偶尔要求您提供身份证明，然后才允许您访问您的个人信息。
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="蔡司是否使用Cookie?" name="9" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          蔡司使用Cookie来确保您的用户体验尽可能地舒适和方便。想了解关于我们如何使用Cookie的更多信息吗？
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          关于Cookie和其他互联网技术的信息
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="您的蔡司ID账户" name="10" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          您的蔡司ID账户可用于登录各种蔡司产品和服务。当您登录时，您自愿提供的信息将用于创建个性化数据记录。这些信息有助于我们为您提供量身定制的产品和服务。
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="伪造的电子邮件（欺骗行为）、垃圾邮件和网络钓鱼" name="11" custom-class="custom-collapse">
+        <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;">
+          谨防网络钓鱼和欺骗活动
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          不幸的是，蔡司品牌成为欺诈行为滥用的受害者。更具体地说，这意味着用户有时会收到假冒蔡司发送的伪造电子邮件。这些电子邮件通常在视觉上看起来像蔡司通信，并且在某些情况下可能难以区分哪些才是蔡司发送的电子邮件。
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          在这些情况下，发送伪造电子邮件的人正试图利用蔡司与其客户之间的信任，以窃取敏感信息（例如：登录详细信息、客户信息、付款信息）或在您的计算机或智能手机上安装恶意软件。
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          这些电子邮件不是由蔡司创建或发送的，即使所使用的名字看上去像蔡司。不幸的是，这也意味着蔡司无法控制非法电子邮件的创建和发送。
+        </view>
+        <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;">
+          以下特征可以帮助您确定您收到的电子邮件是否来自蔡司：
+        </view>
+        <view class="dots" style="    margin-bottom: 15px;">
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">来自蔡司的确认电子邮件和发票只适用于您实际订购的产品</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">蔡司的电子邮件应该没有印刷和语法错误，因为邮件在发送之前经过校对。</view>
+          </view>
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          我们的某些网页也提供有关第三方网站的信息及链接。仅当我们确信该供应商具有良好的商誉时，我们才会作出那样的提示。然而，蔡司无法为此类网站的数据保护规定或为其内容负责，并且一概不承担损害赔偿责任。这些外部链接采用以下符号表示：
+        </view>
+
+        <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;">
+          处理垃圾邮件、网络钓鱼和诈骗邮件的正确方式：
+        </view>
+        <view class="dots" style="    margin-bottom: 15px;">
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">我们建议您立即删除可疑邮件。</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">切勿打开可疑电子邮件中的链接或附件，绝不泄露您的个人信息</view>
+          </view>
+          <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+            <view class="dot"></view>
+            <view style="text-indent: 0.3em;">我们还建议在您的计算机上运行病毒扫描</view>
+          </view>
+        </view>
+
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          如果电子邮件包含有关您的订单或客户信息的异常或可疑信息，请登录您下单的网上商店。您可以在此找到您实际订购的所有订单列表，以及每个订单的状态和发票编号。请在浏览器中手动输入特定蔡司在线服务的地址。手动输入地址可以避免通过电子邮件中包含的链接向欺诈性网站发送信息的风险。
+        </view>
+
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          如果您不确定收到的电子邮件，请使用我们的联系服务与我们联系.
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="特定国家的法规" name="12" custom-class="custom-collapse-1">
+        <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px; ">
+          以下情况适用于位于中华人民共和国境内的用户：
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          一经使用蔡司服务，即表示您明确同意，我们可收集、处理您的个人数据并将数据传送至位于中国境外的接收者。
+        </view>
+      </van-collapse-item>
+    </van-collapse>
+
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      有关保护您的信息的重要信息
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      保护您的个人信息
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      在当今互联世界中，未经授权试图访问信息是个人和公司每天都会遇到的现实问题。保护信息免受未授权访问是一个相当大的挑战。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 50px;">
+      数据保护是蔡司最重要的问题，我们投入时间、精力和资金，确保我们的系统全天候安全并受到监控。当您使用蔡司网站和平台时，您将您的个人信息委托给我们。保护这些信息对我们很重要。您还可以采取措施保护您的个人信息免遭未经授权的访问。您可以在下面找到有关如何帮助确保您的信息安全的信息。
+    </view>
+
+    <van-collapse accordion value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="我该如何保护我的个人信息?" name="13" custom-class="custom-collapse-2">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          关于这一点，应遵循的重要原则是利用只有您知道的密码和PIN码来保护您的计算机、笔记本电脑或移动设备上的信息。另外，请确保在使用完后退出蔡司网站、平台和商店。
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          确保您每个帐户使用不同的密码。切勿在不同的服务提供商或在线门户使用相同的密码。请检查以确保您在蔡司网站和平台上使用的密码不会应用于其他网站。如果是，我们建议您立即更改所有蔡司密码。
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          不要将密码写在别人可以看得到的地方。再次确保您是唯一可以访问这些密码的人。
+        </view>
+      </van-collapse-item>
+      <van-collapse-item title="我如何创建安全的密码?" name="14" custom-class="custom-collapse-2">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          所选密码应不易被猜到。这意味着不要在您的密码中使用常见的日常用语、您自己的名字或家人的姓名。为了增加安全性，最好使用大写和小写字母、数字和特殊字符的组合。
+        </view>
+      </van-collapse-item>
+
+      <van-collapse-item title="我还应该注意哪些其他事项?" name="15" custom-class="custom-collapse-1">
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          如果您使用公共计算机访问蔡司网站或平台，请务必在完成后退出您的帐户。
+        </view>
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          如果您收到未经请求的电子邮件，要求您提供密码或付款信息，请忽略这些信息并立即联系蔡司（前往 联系表格）。我们会调查此事。
+        </view>
+      </van-collapse-item>
+    </van-collapse>
+
+    <view style=" color: #262626; font-size: 1.5rem;  font-weight: bold;    margin-top: 50px;">
+      数据保护声明
+    </view>
+    <view style=" color: #262626; font-size: 1.5rem;   margin-bottom: 30px;">
+      具体版本
+    </view>
+
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 50px;">
+      蔡司数据处理（例如：收集、处理、传输）依照法律进行。您的商业交易所需的个人信息由我们储存，并传输给蔡司签约的服务提供商，以便处理交易。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      适用范围
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      本数据保护声明适用于隶属于蔡司企业集团（以下简称为蔡司）旗下公司的网站、域名、社交媒体平台和应用程序。但并不适用于那些已根据国家立法对数据保护和法律声明进行修订的蔡司公司网站。因此，请注意，您访问的所有蔡司网站或使用的程序均有相应的数据保护声明和法律注意事项。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 50px;">
+      在某些情况下，蔡司网站还包含该数据保护和法律声明不适用的第三方和蔡司外部公司网站的链接。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      一般性数据保护标准
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      蔡司是一家在全球范围内运营的企业，拥有跨国的合法独立公司、业务流程、管理架构和技术系统。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      当您访问我们的网站时，在某些情况下，个人数据可能会被收集。在本声明中，我们将告知您，当您访问我们的网站时，蔡司公司将收集哪些个人信息，以及我们如何处理这些数据。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      我们认为保护您的个人信息是一件非常严肃的事情。我们仅遵循通常适用的法律规定处理您访问我们的网站时所收集的个人资料或私人资料。此外，我们处理个人信息的做法以欧盟数据保护准则为基础，提供最大可能的透明度，并遵守选择权、访问权，以及确保个人信息的传送和合法处理。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      每个蔡司公司都遵守适用于其特定情况的数据保护法。此外，对于集团下属的所有公司而言，针对个人信息的处理在公司政策规范中均有详细描述。此蔡司公司政策规范旨在确保您的数据得到正确处理，并符合处理个人信息的蔡司公司的适用法律。与此同时，我们已经指示我们的员工在任何要求提供个人信息的网站上参考并遵守我们的数据保护规定。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      在法律允许的范围内，以及在适当考虑您在排除传输或使用信息方面的正当权益的情况下，我们可能会将您的地址和信用数据转发给信用机构，或要求信用机构提供相关数据，以便对订单进行信用检查。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      对于通过发票支付的订单以及以分期付款方式进行的采购，我们使用地址数据以及其他信用数据来估计个别情况下的付款违约风险。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      蔡司和蔡司集团的其他公司通常为其客户提供使用不安全付款方式的选项（例如：通过发票付款、信用购物）。以下是蔡司集团公司的非完整列表：
+    </view>
+    <view class="dots">
+      <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+        <view class="dot"></view>
+        <view style="text-indent: 0.3em;">蔡司工业测量技术有限公司</view>
+      </view>
+      <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+        <view class="dot"></view>
+        <view style="text-indent: 0.3em;">卡尔·蔡司光谱有限公司</view>
+      </view>
+      <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+        <view class="dot"></view>
+        <view style="text-indent: 0.3em;">卡尔·蔡司医疗仪器股份有限公司</view>
+      </view>
+      <view style="width: 100%;margin-top: 13px;font-size: 16px;">
+        <view class="dot"></view>
+        <view style="text-indent: 0.3em;">卡尔·蔡司光学有限公司</view>
+      </view>
+      <view style="width: 100%;margin-top: 13px;font-size: 16px;    margin-bottom: 15px;">
+        <view class="dot"></view>
+        <view style="text-indent: 0.3em;">卡尔·蔡司显微镜有限责任公司</view>
+      </view>
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      向客户提供使用不安全付款方式选项的公司有正当理由保护自己免受付款违约。公司通常可在提供使用不安全付款方式的选项之前检查客户的信用，以避免风险。对于信用检查，蔡司有权使用其已收集或由蔡司集团其他公司传输的关于客户的负面信用信息。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      在蔡司集团内的其他公司允许客户选择使用不安全的付款方式之前，蔡司还有权向这些公司传输关于该客户的负面信用信息。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      信用信息是关于客户拖欠付款的信息以及直接表明客户有拖欠付款风险的信息（例如：破产、债务咨询及因无力支付而延期付款）。在蔡司存储所收集的关于未付款的负面信息以便将此信息传输给蔡司集团内的其他公司之前，客户将收到有关可能传输此信息的通知。蔡司还有权向蔡司集团内的其他公司传输有关极不典型订单的信息（例如，同时下达的多件商品订单使用不同的客户帐户，但送货地址相同），并使用从蔡司集团的其他公司收到的极不典型订单的信息。这是为了防止发生付款违约行为，并保护我们的客户免于将其身份用于欺诈目的。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      此外，蔡司还可以出于营销目的收集和处理地址和订单信息。例如，这意味着蔡司可能会将订购过程中收集的电子邮件地址与Facebook Ireland Limited的电子邮件地址列表进行比较，以便向地址所有者显示个性化广告。然而，Facebook Ireland Limited不允许将该电子邮件地址用于除地址列表比较之外的任何用途。只有在法律允许的情况下，才会将信息发送给第三方用于广告目的。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      注意
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 50px;">
+      您可以随时通过给蔡司邮寄非正式书面信件或通过电子邮件方式对您的个人信息的使用、处理和传输提出异议（前往 撤回表格）。在收到您的异议后，除了执行您所请求的订单和任务以外，我们将停止出于任何目的地使用、处理和传输相关信息；我们也将停止向您发送广告和宣传材料。
+    </view>
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      披露或异议：
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 50px;">
+      想知道您的哪些个人信息是由蔡司处理吗？想对使用您的信息提出异议吗？根据《一般数据保护条例》第15条和德国联邦数据保护法2017第34条，这是您的合法权利，我们将非常乐意满足您的要求。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      收集、处理和传输个人信息
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      蔡司希望您尽可能多地掌握自己的个人信息。通常情况下，您可以访问蔡司网站而不提供任何个人信息。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      但在蔡司网站的某些区域，您需要输入个人数据，以帮助我们改进网站并与您保持联系。您提交的任何个人信息均被视为机密信息，且仅在您与蔡司的关系范围内进行保存和处理。在未经您事先批准的情况下，不会将您的个人信息转发、发布或以其他方式交给第三方用于营销目的。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      然而，作为我们所提供服务的一部分，在某些情况下，您的信息可能会被传送给订单处理流程中所涉及的第三方，如商业合作伙伴或IT服务提供商。在向第三方传输个人信息时，我们会仅限于交付提供服务所必需的资料，并在传输时遵守必要的数据安全措施。蔡司公司仅向承诺实施数据保护及按照适用法律处理个人信息的第三方传送您的个人信息。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      此外，蔡司可能会在法院或官方命令的强制要求下披露您的个人数据和相关信息。同样，我们保留使用您的信息提出法律诉讼主张或诉诸法律的权利。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      在被另一家公司收购或合并的情况下，可能需要向实际或潜在的买家披露或转让您的个人信息。在此等情况下，蔡司会采取最高数据保护等级，并遵守法律规定。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      受影响的人的权利
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      您有权随时要求有关我们处理个人数据的信息；您也可能反对这些信息处理，并要求限制处理您的个人信息的程度，更正或删除这些信息。请注意，如果没有法律规定要求存储此信息，或者蔡司存储此信息的权利不优先于您删除该信息的权利，则蔡司只能删除您的个人信息。另请注意，一旦您要求删除您的信息，或者限制您的信息处理，或者您反对处理您的信息，则您可能不能再使用蔡司服务，因为这些服务需要部分或全部需要使用您的个人信息。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      如果蔡司使用您的个人信息，且因为您已同意蔡司使用，或者需要履行与蔡司签订的合同，您可以要求提供一份有关您提供给蔡司的信息的副本。请将您的请求发送到下面提供的电子邮件地址。请确保包含您要求获取信息的数据或处理活动，您希望以何种格式接收此信息，以及是否应将信息发送给您或其他收件人。蔡司将仔细审查您的要求并通知您实现该要求的最佳方式。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      此外，在以下情况下，您可以要求蔡司不与他人共享您的个人信息：
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      1.如果您声称蔡司持有的个人信息不正确（但是，在此情况下，信息的处理仅限于蔡司核实所涉个人信息准确性期间）；
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      2.如果蔡司处理您的个人信息时没有法律依据，并且您要求蔡司停止处理您的信息；
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      3.如果蔡司不再需要您的个人信息，但您声称蔡司必须存储此信息，以便提出或行使法律索赔，或者可以为第三方的索赔提供辩护；或
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      4.如果您反对蔡司（基于蔡司的合法利益）处理您的个人信息，则需要确认蔡司处理您个人信息的权益是否优先或者是否存在存储信息的法律要求。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      儿童的个人数据：
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      除了专门针对儿童的网站之外，或者根据当地法律的要求，蔡司不会故意收集或处理16岁以下儿童的信息。蔡司遵守这些网站上适用的数据保护法律。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      遵守法规
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      蔡司及其产品、服务和技术受到包括欧盟及其成员国和美国在内的各国出口条例的约束。您承认，根据适用的出口法规、贸易制裁和禁运，蔡司必须采取措施防止制裁方名单中所列的公司、组织和当事方通过蔡司网站或由蔡司掌控的交付渠道获取某些产品、技术和服务。这些措施可能包括以下内容：
+    </view>
+
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      1.本通知中描述的用户注册信息和与用户身份有关的其他信息与适用的制裁名单进行自动比较；
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      2.当制裁名单更新或用户更新其信息时，应定期和反复比较这些信息；
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      3.如果用户可能被列入适用的制裁名单，则将阻止其访问蔡司的服务和系统；
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      4.如果用户信息被列入制裁名单，则与其进行联系以验证身份。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      此外，您承认，开展活动所需的信息（对您个人信息的处理和使用均取决于您的决定）或接收蔡司发送的营销和促销材料（无论相关蔡司公司所处的国家为何，无论您是否明确允许或拒绝接受营销和促销材料）所需的信息均由公司存储在蔡司集团内，并在法律规定的范围内进行共享。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      问卷和调查
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      蔡司可能会邀请您参加客户调查。客户调查中所使用的问卷在设计上会采用无需提供个人信息即可回答问题的方式。但蔡司可能会利用您在调查或问卷中提供的任何个人信息改进其产品和服务。
+    </view>
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      生成匿名数据集
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      蔡司可将本数据保护声明中所涵盖的个人信息匿名化，以创建可用于改进蔡司产品和服务及其附属公司产品和服务的匿名数据集。
+    </view>
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      录制电话和聊天对话，以提高服务质量
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      蔡司可能会录制电话或聊天对话（在电话交谈中通知您之后及在录制开始之前），以提高其服务质量。
+    </view>
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      让您随时了解最新情况并收集反馈
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      在蔡司与您（作为客户）的关系框架内，蔡司可能会在法律允许的范围内随时向您发送关于其产品和服务的最新消息（例如网络研讨会、研讨会及活动），这些产品和服务与您已从蔡司购买或您使用的产品和服务类似或直接相关。此外，蔡司可能会与您联系，以收集有关反馈意见，其中包括购买产品、服务或参加过的研讨会、网络研讨会或活动，此举旨在改进产品、服务、网络研讨会、研讨会或有关活动。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 50px;">
+      数据安全信息
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      蔡司深知，谨慎处理和保护您向我们提供的信息至关只要。我们网站上的数据安全是重中之重。因此，我们尽了很大的努力，以确保网络安全的措施是有效的。蔡司网站的基本数据流皆进行加密。为保证您发送给我们的信息在互联网上传送过程中的私密性，并跟上技术进步的步伐，蔡司会不断努力更新加密技术。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      在技术上可行的范围内，例如为衡量网页的使用情况和有效性，以及为验证身份和简化导航，我们采用了各种技术，包括“Cookie”。Cookie是网站发送到浏览器的数据元。它存储在您的系统中并用于识别用户（请参阅Cookie、Web跟踪和Web分析）。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      在访问我们网站的过程中，会捕获访客的IP地址，以用于分析故障、管理网站及建立人口统计特征。此外，我们还会使用您在本网站上或者根据需要通过其他方式提供给我们的IP地址和其他信息，来了解访客访问了我们的哪些网站以及访客感兴趣的主题。
+    </view>
+
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 80px; margin-bottom: 20px;">
+      特定国家的规定
+    </view>
+    <van-collapse accordion value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="中华人民共和国" name="16" custom-class="custom-collapse-1">
+        <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px; margin-bottom: 15px;">
+          以下情况适用于位于中华人民共和国境内的用户：
+        </view>
+
+        <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+          一经使用蔡司服务，即表示您明确同意，我们可收集、处理您的个人数据并将数据传送至位于中国境外的接收者。
+        </view>
+      </van-collapse-item>
+    </van-collapse>
+
+    <view style=" color: #262626; margin-top: 80px; background-color: #f7f7f7;">
+      <view style=" color: #262626; font-size: 18px;  font-weight: bold;padding-top: 30px; padding-left: 15px;">
+        联系方式
+      </view>
+      <view style=" color: #262626; font-size: 18px; ;margin-bottom: 20px; padding-left: 15px;">
+        对于数据保护问题
+      </view>
+      <view style=" color: #262626; font-size: 15px; ;margin-bottom: 20px; padding-left: 15px;">
+        如果您有数据保护方面的问题，请联系：
+      </view>
+      <view style=" color: #262626; font-size: 15px; padding-left: 15px;">
+        企业数据保护官（Corporate Data Protection Officer）
+      </view>
+      <view style=" color: #262626; font-size: 15px;  padding-left: 15px;">
+        Carl-Zeiss-Strasse 22
+      </view>
+      <view style=" color: #262626; font-size: 15px;  padding-left: 15px;">
+        73447 Oberkochen
+      </view>
+
+      <view style=" color: #262626; font-size: 15px; ;margin-bottom: 20px;    margin-top: 15px; padding-left: 15px;">
+        通过电子邮件联系（请勿发送任何机密内容）：mailto:do-not-reply@zeiss.com
+      </view>
+
+      <view style=" color: #262626; font-size: 15px; ;margin-bottom: 80px; padding-bottom: 30px; padding-left: 15px;">
+        致电联系： +49 7364 20-0（关键词“数据隐私”）
+      </view>
+    </view>
+
+    <view style=" color: #262626; font-size: 16px;  font-weight: bold; font-size: 17px;    margin-top: 80px; margin-bottom: 20px;">
+      对此数据保护声明的修改
+    </view>
+
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      此声明有时会进行修改，以确保其符合当前的法律要求并涵盖我们的所有在线服务。
+    </view>
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      您对信息、更正、阻止、删除和异议的合法权利不受这些更改的影响。
+    </view>
+
+    <view style=" color: #262626; font-size: 16px; margin-bottom: 15px;">
+      © Carl Zeiss AG – 最后更新于：2020年12月
+    </view>
+    <view style="height: 80px;">
+    </view>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+<view class='view-page'>
+  <navbar page-name="蔡司学习小组"></navbar>
+  <view class='page-content'>
+
+    <van-sticky offset-top="{{ navHeight }}">
+      <view class="operation-container" wx:if="{{showOperationContainer}}">
+        <view class="add-container" bindtap="addGroup">
+          <!-- <van-icon name="../../images/add.png" /> \t \t添加小组 -->
+          <van-buttom icon="../../images/add.png" color="#008BD0" type="primary" block custom-style="    font-size: 12px;line-height: 14px;    height: 40px;color: #000000;  background: #fff;border: none;padding-left: 5px; padding-right: 10px;">添加小组 </van-buttom>
+        </view>
+        <view class="edit-container">
+          <!-- <van-icon name="../../images/edit.png" /> \t \t编辑 -->
+          <van-buttom disabled="{{groups.length==0}}" icon="../../images/edit.png" bind:click="editGroup" color="#008BD0" type="primary" block custom-style="    font-size: 12px;line-height: 14px;    height: 40px;color: #000000;  background: #fff;border: none;padding-left: 5px; padding-right: 5px;">编辑 </van-buttom>
+        </view>
+      </view>
+    </van-sticky>
+
+
+    <view class="group-container" hover-class="navigator-hover" wx:for="{{groups}}" wx:key="index" bindtap="showGroup" data-index="{{item}}">
+      <view class="container-left">
+        <image src="{{item.imagePath}}" />
+      </view>
+      <view class="container-right" style="{{groups.length-1==index?'border-bottom:none':''}}">
+        <view class="group-name">
+          {{item.name}}
+        </view>
+        <view class="group-detail">
+          <view class="group-menber" wx:if="{{item.isGroup}}">人数:{{item.memberCount}}</view>
+          <view class="group-course">课程:{{item.courseCount}}</view>
+          <view class="group-progress">{{item.isGroup?'平均进度':'进度'}}:{{item.completePercent}}%</view>
+        </view>
+        <view class="group-icon" style="{{!item.isGroup?'width: 35%;':''}}">
+          <van-icon name="arrow" size="12" color="#DFDFDF" />
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{groups.length==0}}" style="text-align: center;font-size: 12px; color: #000000;line-height: 70vh; height: 80vh;">
+      没有小组信息
+    </view>
+
+  </view>
+  <tabbar active="learnGroup" />
+</view>

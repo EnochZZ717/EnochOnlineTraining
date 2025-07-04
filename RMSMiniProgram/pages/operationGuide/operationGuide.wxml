@@ -1,0 +1,140 @@
+<wxs src="../../utils/util.wxs" module="common" />
+<view class='view-page'>
+  <navbar page-name="培训课程"></navbar>
+  <view class='page-content'>
+    <van-search value="{{ searchValue }}" bind:change="onSearchChange" bind:search="onSearch" placeholder="搜索课程"
+      bind:focus="onActiveInput" />
+    <view id="tempModal">
+
+    </view>
+    <van-overlay show="{{ showModal }}" bind:click="onClickHide" top="{{modalLocation}}">
+      <view class="search-wrapper">
+        <view class="search-block">
+          <view class="search-modal">
+            <view wx:for="{{hotKeys}}" wx:key="index" class="search-item {{searchValue==item?'filter-item-active':''}}"
+              bindtap="onHotKeySearch" data-value="{{item}}">
+              {{item}}</view>
+          </view>
+        </view>
+      </view>
+    </van-overlay>
+
+    <view class="tips">
+      <text> \t {{tips}}</text>
+      <van-button type="info" size="mini" custom-class="unlock-btn" color="#008BD0" catchtap="enterSNNumber">解锁
+      </van-button>
+      <van-popup maxHeight="450px" show="{{ showSnPopup }}" round position="bottom" custom-style="height: 80%"
+        bind:close="onCloseSnPopup" z-index="10000">
+        <view class="sn-tips-container" bindtap="goSnGuide">
+          <!-- <van-buttom bindtap="onCloseSnPopup" type="primary" size="mini" round custom-style="margin-top: 10px;margin-button:10px;float:right;margin-right: 10px;">完成
+        </van-buttom> -->
+          点击此处查看<text style="color: #008BD0;font-weight: bold;">如何找到序列号?</text>
+        </view>
+        <view>
+          <van-field value="{{ inputSn }}" maxlength="24" type="number" center clearable placeholder="请输入SN号"
+            bind:change="onSnChange" input-class="sn-input" use-button-slot>
+            <van-button slot="button" wx:if="{{showConfirmInput}}" disabled="{{confirmSnInput}}" type="primary" size="mini" color="#008BD0" bind:click="onCompleteSnInput" custom-style="{{confirmSnInput?'color:#a59696;background-color:#eee;border-color:#ccc;':''}}">确定
+            </van-button>
+          </van-field>
+        </view>
+        <scroll-view scroll-y style="max-height: 280px;">
+          <!-- <van-cell wx:for="{{inputSns}}" wx:key="index" title="{{item}}">
+            <van-icon slot="right-icon" color="#3D3D3D" name="delete-o" bind:click="onRemoveSn" data-index="{{item}}" size="20" />
+          </van-cell> -->
+
+          <van-field wx:for="{{inputSns}}" wx:key="index" value="{{ item }}" maxlength="24" type="text" center
+            input-class="sn-input" bind:confirm="onUpdateSnInput" bind:focus="onClickUpdateSnInput">
+            <van-icon slot="right-icon" color="#3D3D3D" name="delete-o" bind:click="onRemoveSn" data-index="{{item}}"
+              size="20" />
+          </van-field>
+        </scroll-view>
+      </van-popup>
+    </view>
+    <view style="width: 100%;height: 1px;">
+
+    </view>
+    <!-- <van-overlay show="{{ showSNNumberModal }}" z-index="9999">
+      <view class="wrapper2">
+        <view class="block2">
+          <view class="block-title2">
+            输入设备序列号(SN)
+          </view>
+          <view class="block-input2">
+            <van-field type="number" value="{{ snNumber }}" input-class="sn-input" placeholder="请输入序列号" bind:change="onSNNumberChange" border="{{false}}" />
+            <view style="font-size: 12px;color: #FF0000;visibility: {{displayErrorMessage}};">
+              序列号输入有误, 检查后重新输入
+            </view>
+          </view>
+          <view class="block-btn2">
+            <van-button type="default" custom-class="width-88" bind:click="onReturn" size="small">取消</van-button>
+            <van-button type="info" color="#008BD0" custom-class="width-88 margin-15" bind:click="onSaveSNNumber" size="small">确定</van-button>
+
+          </view>
+        </view>
+      </view>
+    </van-overlay> -->
+
+    <view>
+      <van-dropdown-menu active-color="#000000" overlay id="filter-menus">
+        <van-dropdown-item title="排序" value="{{ sortValue }}" options="{{ sortFilter }}" bind:change="onSortChange" />
+        <van-dropdown-item title="课程" id="item">
+          <view style="max-height: 250px;overflow: scroll;">
+            <view wx:for="{{categories}}" wx:key="index">
+              <view class="course-category-title">{{item.name}}</view>
+              <view style="width: 97%;height: auto;margin-bottom: 10px;">
+                <view wx:for="{{item.subNames}}" wx:for-item="subItem" wx:key="index"
+                  class="filter-item {{common.isExist(activeCategories,subItem.id)?'filter-item-active':''}}"
+                  bindtap="onCategoryActive" data-value="{{subItem}}">
+                  {{subItem.name}}</view>
+              </view>
+            </view>
+            <view style="height:10px;">\t</view>
+          </view>
+          <view style="text-align: center; margin-bottom: 15px; margin-top: 15px;">
+            <van-button type="default" size="small" custom-class="cancel-btn" bind:click="onReset">重置</van-button>
+            <van-button type="info" size="small" color="#008BD0" custom-class="submit-btn" bind:click="onSubmit">确定
+            </van-button>
+          </view> 
+        </van-dropdown-item>
+      </van-dropdown-menu>
+    </view>
+
+    <scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="onRefreshByPage" enable-flex
+      style="height:{{scoreViewHeight}};overflow:scroll;" bindscroll="{{null}}" scroll-into-view="{{null}}"
+      scroll-top="{{null}}" bindscrolltoupper="{{null}}" refresher-enabled refresher-background="#fff"
+      bindrefresherrefresh="onRefresh" refresher-triggered="{{refreshTriggered}}" refresher-threshold="{{50}}"
+      scroll-y="{{true}}" lower-threshold="{{50}}" scroll-anchoring="{{true}}">
+      <view class="courses-container" wx:for="{{courses}}" wx:key="index" hover-class="navigator-hover"
+        bindtap="onShowCourse" data-index="{{item}}">
+        <view style="height: 7px;">
+
+        </view>
+        <view class="course">
+          <view class="course-img-container">
+            <image src="{{item.coverImage.contentPath}}" mode="aspectFill" lazy-load />
+          </view>
+          <view class="course-context-container">
+            <view class="course-name">
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+        <view style="height: 7px;">
+
+        </view>
+      </view>
+
+      <view style="display: {{hasData?'none':'block'}};" class="empty-contianer">
+        没有找到相应的课程
+      </view>
+
+      <view style="width:100%;text-align:center;height:40px;display:{{refreshActive?'block':'none'}};">
+        <van-loading size="12px" class="no-more" wx:if='{{ hasMore}}'>加载中...</van-loading>
+        <view class="no-more" wx:else>没有更多了...</view>
+      </view>
+    </scroll-view>
+
+  </view>
+
+  <tabbar active="operationGuide" />
+</view>

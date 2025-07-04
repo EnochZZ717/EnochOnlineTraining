@@ -1,0 +1,38 @@
+<wxs src="../../../utils/util.wxs" module="common" />
+<navbar page-name="" showNav="{{true}}"></navbar>
+<view style="margin-top: 20px; margin-bottom: 87px;">
+  <view style="margin-bottom: 15px;" wx:for="{{courses}}" wx:key="index" bindtap="selectCourse" data-index="{{item}}">
+    <view style=" height: 63px;">
+      <view class="checkbox-container">
+        <image src="{{common.isExist(selectedCourse,item.id)?'../../../images/checked.png':'../../../images/checkbox.png'}}" style="width: 12px; height: 12px;" />
+      </view>
+      <view style="width: 30%; float: left;">
+        <image src="{{item.imagePath}}" style="width: 104px; height: 63px;" />
+      </view>
+      <view class="pop-context-container">
+        <view class="pop-course-name">
+          {{item.name}}
+        </view>
+        <view class="detail" catchtap="detail" data-index="{{item}}">
+          详情
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="height: 85px;"></view>
+
+  <view class="operation-container">
+    <view style="width: 25%; float: left;line-height: 49px;text-indent: 1em;" bindtap="selectAll">
+      <image src="{{isSelectAll?'../../../images/checked.png':'../../../images/checkbox.png'}}" style="width: 12px; height: 12px;" /> \t全选
+    </view>
+    <view style=" width: 25%; float: left; line-height: 49px;">
+      课程: {{selectedCourse.length}}
+    </view>
+    <view style="width: 50%; float: left;">
+      <van-buttom bindtap="onSave" type="default" block custom-style="width:72px;height: 32px; line-height: 32px;font-size: 13px;float:left;margin-top: 8px;    margin-left: 15px;" bindtap="onCancel">取消
+      </van-buttom>
+      <van-buttom bindtap="onSave" color="#008BD0" type="primary" block custom-style="width:72px;height: 32px; line-height: 32px;font-size: 13px;float:left;margin-left:15px;margin-top: 8px;" bindtap="onSave">保存
+      </van-buttom>
+    </view>
+  </view>
+</view>

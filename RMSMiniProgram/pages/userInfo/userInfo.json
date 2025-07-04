@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "navbar": "/components/homePage-navbar/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-image": "@vant/weapp/image/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "tabbar": "@vant/weapp/common-tabbar/index",
+        "refresh-view": "/components/refresh-view/refresh-view"
+    },
+    "backgroundColor": "#F6F6F6"
+}

@@ -1,0 +1,15 @@
+.row{
+    height: 77px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listItem{
+    cursor: pointer;
+}
+
+.border{
+    border-bottom: 1px solid #f0f0f0;
+}

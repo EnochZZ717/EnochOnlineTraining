@@ -1,0 +1,68 @@
+.user-left {
+    width: 20%;
+    float: left;
+    margin-top: 13px;
+    text-align: center;
+}
+
+.user-center {
+    width: 70%;
+    float: left;
+    margin-top: 30px;
+    /* text-indent: 0.5em; */
+}
+
+.page {
+    background: #F6F6F6;
+    height: 100vh;
+}
+
+.van-cell-text {
+    color: #000000;
+    font-size: 14px;
+    margin-left: 16px;
+}
+
+.cell-index--van-cell__right-icon {
+    color: #DFDFDF;
+}
+
+.cell-index--van-cell__left-icon {
+    color: #7F7F7F;
+}
+
+/* .user-avatar {
+    margin-top: 4.5%;
+    float: right;
+} */
+
+.user-nickname {
+    color: #101010;
+    font-size: 14px;
+}
+
+.user-right {
+    width: 10%;
+    float: left;
+    margin-top: 30px;
+    color: #DFDFDF;
+}
+
+.user-container {
+    width: 100%;
+    height: 75px;
+    background: #fff;
+}
+
+
+.van-cell {
+    line-height: 30px !important;
+}
+
+.van-cell__left-icon-wrap {
+    height: 30px !important;
+}
+
+.van-cell__right-icon-wrap {
+    height: 30px !important;
+}

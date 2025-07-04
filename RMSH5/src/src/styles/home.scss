@@ -1,0 +1,72 @@
+.title{
+    font-size: 14px;
+    font-weight: 1000;
+    margin: 15px auto;
+}
+
+.zeiss-list-item{
+    display: inline-block;
+    width: 259px;
+    max-height: 260px;
+}
+
+.banner{
+    margin: 5px auto;
+}
+
+.sntip{
+    color: #353D45;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.snButton{
+    text-align: right;
+
+    button{
+        font-size: 13px;
+    }
+}
+
+.listImg{
+    height: 122px;
+}
+
+.typeCol{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.typeRow{
+    background-color: #F6F6F6;
+    margin: 10px auto;
+}
+
+.seperateLine{
+    background-color: #000000;
+    width: 1px;
+    height: 70px;
+}
+
+.typeSeperateCol{
+    text-align: -webkit-center;
+    align-self: center;
+    position: none;
+}
+
+.seperateCol{
+    justify-content: center;
+    width: 100%;
+}
+
+.global_search{
+    width: '100%';
+    position: 'relative';
+
+    &_tag{
+        min-height: 40;
+        z-index: 1;
+    }
+}

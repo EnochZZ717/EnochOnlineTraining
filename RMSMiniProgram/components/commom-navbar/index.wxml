@@ -1,0 +1,10 @@
+<view class="navbar custom-class" style='height:{{navHeight}}px;background-color:{{bgColor}};position: fixed;'>
+  <view wx:if="{{showNav}}" class="navbar-action-wrap navbar-action-group row item-center" style='top:{{navTop}}px;background-color:rgba(255,255,255,.6);border: 1px solid #f0f0f0;'>
+    <icon name="arrow-left" class="navbar-action_item" size="16px" bindtap="_navBack" />
+    <icon name="wap-home-o" class="navbar-action_item last" size="16px" bindtap="_toIndex" />
+  </view>
+  <view class='navbar-title' style='top:{{navTop}}px'>
+    {{pageName}}
+  </view>
+</view>
+<view style="height:{{navHeight}}px;position: inherit;background-color:#f5f5f5;"></view>

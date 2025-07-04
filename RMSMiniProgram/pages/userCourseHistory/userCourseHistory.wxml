@@ -1,0 +1,28 @@
+<view class="page">
+  <navbar page-name="观看历史"></navbar>
+
+  <view class="courses-container" wx:for="{{courses}}" wx:key="index" bindtap="onShowCourse" data-index="{{item}}">
+    <view style="height: 7px;">
+    </view>
+    <view class="course">
+      <view class="course-img-container">
+        <image src="{{item.contentPath}}" mode="aspectFill" lazy-load />
+      </view>
+      <view class="course-context-container">
+        <view class="course-name">
+          {{item.name}}
+        </view>
+        <view class="course-favor" catchtap="onRemoveCollection" data-index="{{item}}">
+          {{item.lastBrowerDate}}
+        </view>
+      </view>
+    </view>
+    <view style="height: 7px;">
+
+    </view>
+  </view>
+
+  <view wx:if="{{courses.length==0}}" class="empty-contianer">
+    没有浏览记录
+  </view>
+</view>

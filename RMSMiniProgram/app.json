@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/register/register",
+    "pages/account/userInfo/userInfo",
+    "pages/courseDetails/courseDetails",
+    "pages/cloudClassroom/cloudClassroom",
+    "pages/operationGuide/operationGuide",
+    "pages/operationCourseDetails/operationCourseDetails",
+    "pages/exam/exam",
+    "pages/search/search",
+    "pages/externalPage/downloadCourse/download",
+    "pages/externalPage/statement/statement",
+    "pages/error/error",
+    "pages/userCollection/userCollection",
+    "pages/userDetail/userDetail",
+    "pages/userCourseHistory/userCourseHistory",
+    "pages/snGuide/snGuide",
+    "pages/memberGroup/memberGroup",
+    "pages/addMemberGroup/addMemberGroup",
+    "pages/addMemberGroup/course-item/course-item",
+    "pages/memberGroup/editMemberGroup/editMemberGroup",
+    "pages/memberGroup/joinGroup/joinGroup",
+    "pages/memberGroup/editGroupCourse/editGroupCourse"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "蔡司空中教室",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

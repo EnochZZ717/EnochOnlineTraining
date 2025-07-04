@@ -1,0 +1,119 @@
+.container {
+  width: 94%;
+  height: 100vh;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+image {
+  width: 100%;
+  margin-bottom: .75rem;
+}
+
+.company-name {
+  display: block;
+  text-transform: uppercase;
+  font-size: .75rem;
+  line-height: 1.33333;
+  margin-bottom: .75rem;
+  font-weight: 700;
+}
+
+.data-protection {
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.data-protection-des {
+  font-size: 19px;
+}
+
+.description {
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.data-protection-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.border {
+  border-bottom: 1px solid #eee;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.van-cell {
+  padding: 10px 0px !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  line-height: 32px !important;
+}
+
+.van-icon-arrow {
+  font-weight: 700 !important;
+  line-height: 32px !important;
+}
+
+.van-cell__left-icon-wrap,
+.van-cell__right-icon-wrap {
+  height: 32px !important;
+}
+
+.dots {
+  left: 0;
+  right: 0;
+  justify-content: center;
+  color: #262626;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+.custom-collapse-1 {
+  color: red;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+.custom-collapse-2 {
+  color: red;
+  border-top: 1px solid black;
+}
+
+.dots .dot {
+  margin: 9px 5rpx;
+  width: 8rpx;
+  height: 8rpx;
+  background: black;
+  border-radius: 8rpx;
+  transition: all .6s;
+  float: left;
+}
+
+.custom-collapse {
+  color: red;
+  border-top: 1px solid black;
+}
+
+.van-collapse-item__content {
+  padding: 0 !important;
+}
+
+.custom-collapse view {
+  font-size: 16px;
+  color: #262626;
+}
+
+.van-cell__title {
+  font-size: 18px !important;
+}
+
+.van-cell:after {
+  border: none !important;
+}
+
+.van-collapse-item__title--expanded view{
+  color: #008bd0 !important;
+}

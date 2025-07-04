@@ -1,0 +1,10 @@
+<van-overlay show="{{ show }}" z-index="9999">
+  <view class="wrapper">
+    <view class="block">
+      <view class="block-title">蔡司空中课堂是分享创新显微技术知识和应用案例的小程序，为了提供更好的服务，请先前往注册。</view>
+      <view class="block-btn">
+        <van-button type="info" custom-class="width-103" bind:click="_register" size="small" color="#008BD0">前往注册</van-button>
+      </view>
+    </view>
+  </view>
+</van-overlay>

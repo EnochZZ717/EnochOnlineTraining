@@ -1,0 +1,204 @@
+page {
+    height: 100%;
+}
+
+/* .courses-container:hover {
+    color: black !important;
+    font-weight: bold !important;
+} */
+
+/* .courses-container:hover .course-description {
+    height: auto;
+    overflow: hidden;
+} */
+
+.txt {
+    color: #70788C;
+    display: inline-block;
+    font-size: 28rpx;
+    line-height: 38rpx;
+    width: 92%;
+    margin-left: 4%;
+}
+
+.txt-item {
+    font-size: 13px;
+    color: #000000;
+    text-align: justify;
+}
+
+.course-title {
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.box-module {
+    /* display: table; */
+    margin: 0 auto;
+    /* width: 92%; */
+}
+
+.box-module .box-title {
+    display: inline-block;
+    font-size: 25rpx;
+    font-weight: bold;
+    color: #3c4a55;
+    width: 100%;
+    margin-top: 18rpx;
+    margin-bottom: 18rpx;
+    margin-left: 4%;
+}
+
+
+.playingVideo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.playingVideo video {
+    width: 100%;
+    height: 213px;
+}
+
+.courses-container {
+    width: 100%;
+}
+
+/* .course-img-container {
+    width: 15%;
+    float: left;
+    margin-top: 6px;
+    color: #666666;
+} */
+
+.course-img-container {
+    width: 10%;
+    float: left;
+    margin-top: 21px;
+    color: #666666;
+    text-align: left;
+}
+
+.course-context-container {
+    float: left;
+    width: 90%;
+    border-bottom: 1px solid #eee;
+    height: auto;
+    font-size: 11.5px;
+}
+
+.video-loading {
+    width: 100%;
+    height: 100%;
+    line-height: 225px;
+    text-align: center;
+    top: 0;
+    position: absolute;
+    z-index: 99999;
+    /* background-image: url(https://zeissonlinetraining.blob.core.chinacloudapi.cn/testcontainer/image/playbackgroup.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.course-img-container image {
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+}
+
+.course-name {
+    float: left;
+    margin-top: 7px;
+    font-size: 13px;
+    width: 100%;
+    height: auto;
+    text-align: justify;
+}
+
+.course-status {
+    float: left;
+    width: 100%;
+}
+
+.section-container {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 10px;
+    display: inline-block;
+    width: 92%;
+    margin-bottom: 80px;
+}
+
+.section-container-left {
+    flex-direction: column;
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+}
+
+.section-container-right {
+    flex-direction: row;
+    width: 20%;
+    float: left;
+    line-height: 50px;
+}
+
+.copyright {
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+    position: fixed;
+}
+
+.star-txt {
+    float: right;
+    margin-right: 12px;
+    color: #666666;
+}
+
+.complete-node {
+    color: #000000;
+    font-weight: bold;
+}
+
+.incomplete-node {
+    color: #7F7F7F;
+}
+
+.course-description {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 5px;
+    width: 85%;
+    float: left;
+    height: auto;
+    margin-top: 5px;
+}
+
+.navigator:hover {
+    color: blue;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.block {
+    width: 240px;
+    height: 260px;
+    background-color: #fff;
+}
+
+.official-account-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

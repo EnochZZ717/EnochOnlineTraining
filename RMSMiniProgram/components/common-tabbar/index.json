@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tabbar": "@want/weapp/tabbar/index",
+    "van-tabbar-item": "@want/weapp/tabbar-item/index"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "navbar": "/components/homePage-navbar/index",
+    "tabbar": "/components/common-tabbar/index",
+    "van-icon": "/@vant/weapp/icon/index",
+    "van-buttom": "@vant/weapp/button/index",
+    "van-sticky": "@vant/weapp/sticky/index"
+  },
+  "backgroundColor": "#F6F6F6"
+}

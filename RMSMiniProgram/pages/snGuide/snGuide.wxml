@@ -1,0 +1,19 @@
+<view class="page">
+  <navbar page-name="SN向导"></navbar>
+  <view wx:for="{{videos}}" wx:key="index" class="video-contaier">
+    <view style="margin-bottom: 5px;">
+      {{item.name}}
+    </view>
+    <view style="margin-bottom: 5px;">
+      <video id="myVideo" src="{{item.contentPath}}" binderror="videoErrorCallback" show-play-btn controls="{{true}}" picture-in-picture-mode="{{[]}}" objectFit='fill' style="width: 100%;" poster="{{item.backgroundImagePath}}" enable-play-gesture title="{{item.name}}" custom-cache="{{true}}" show-center-play-btn="{{true}}" autoplay="{{false}}" show-screen-lock-button></video>
+    </view>
+    <view style="font-size: 12px;color:#959595;">
+      {{item.description}}
+    </view>
+  </view>
+
+
+  <view style="height: 80px;">
+
+  </view>
+</view>
